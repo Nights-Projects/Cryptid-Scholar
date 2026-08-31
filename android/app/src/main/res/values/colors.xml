@@ -5,4 +5,11 @@
     <color name="gold">#F1C40F</color>
     <color name="cream">#E8E8F0</color>
     <color name="purpleMedium">#625FA6</color>
+    <color name="white">#FFFFFF</color>
+
+    <!-- Bottom Navigation colors -->
+    <color name="bottomNavIconActive">#F1C40F</color>
+    <color name="bottomNavIconInactive">#FFFFFF</color>
+    <color name="bottomNavTextActive">#F1C40F</color>
+    <color name="bottomNavTextInactive">#FFFFFF</color>
 </resources>
