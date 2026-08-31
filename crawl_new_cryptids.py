@@ -159,9 +159,6 @@ def parse_cryptid_tables(soup: BeautifulSoup) -> list[dict]:
 
     for table in tables:
         rows = table.find_all("tr")
-        # Get header structure to understand column layout
-        header_cells = rows[0].find_all(["th", "td"]) if rows else []
-
         for row in rows[1:]:
             # Include both th and td (Wikipedia sometimes uses th for first column)
             cells = row.find_all(["td", "th"])
@@ -404,7 +401,7 @@ def main():
     # Compute diff
     diff = compute_diff(wiki_cryptids, seed_data)
     summary = diff["summary"]
-    print(f"\n[*] Diff Summary:")
+    print("\n[*] Diff Summary:")
     print(f"    Total found on Wikipedia: {summary['total_found']}")
     print(f"    New (not in seed):        {summary['new_count']}")
     print(f"    Updated (changed data):   {summary['updated_count']}")
@@ -413,13 +410,13 @@ def main():
 
     # Show new cryptids
     if diff["new"]:
-        print(f"\n[+] New cryptids found:")
+        print("\n[+] New cryptids found:")
         for c in diff["new"]:
             print(f"  • {c['name']} ({c['country'] or '?'}) — {c['type']}")
 
     # Show updated cryptids
     if diff["updated"]:
-        print(f"\n[~] Updated cryptids:")
+        print("\n[~] Updated cryptids:")
         for entry in diff["updated"][:10]:  # show first 10
             print(f"  • {entry['name']}:")
             for field, change in list(entry["changes"].items())[:3]:
@@ -428,7 +425,7 @@ def main():
 
     # Show enriched cryptids
     if diff["enriched"]:
-        print(f"\n[+] Enriched cryptids (new fields added):")
+        print("\n[+] Enriched cryptids (new fields added):")
         for entry in diff["enriched"][:10]:
             print(f"  • {entry['name']}: {', '.join(entry['enrichments'].keys())}")
 
@@ -443,13 +440,13 @@ def main():
             print(f"\n[✓] Changes applied to seed: {result}")
             print(f"    New total: {result['new_total']} cryptids")
         else:
-            print(f"\n[!] To apply: python3 crawl_new_cryptids.py --apply")
+            print("\n[!] To apply: python3 crawl_new_cryptids.py --apply")
     else:
         print("\n[*] Dry run — no files written")
 
     if not args.dry_run and not args.apply:
-        print(f"[!] To apply updates: python3 crawl_new_cryptids.py --apply")
-        print(f"[!] To preview:      python3 crawl_new_cryptids.py --dry-run")
+        print("[!] To apply updates: python3 crawl_new_cryptids.py --apply")
+        print("[!] To preview:      python3 crawl_new_cryptids.py --dry-run")
 
 
 if __name__ == "__main__":
