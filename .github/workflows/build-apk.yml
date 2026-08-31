@@ -58,8 +58,11 @@ jobs:
         id: bump
         run: |
           NEW_VERSION_CODE=$((${{ steps.version.outputs.current_version_code }} + 1))
+          # Format as XX with leading zero for alpha-1.XX format
+          PADDED_VERSION=$(printf "alpha-1.%02d" $NEW_VERSION_CODE)
           echo "new_version_code=$NEW_VERSION_CODE" >> $GITHUB_OUTPUT
-          echo "New versionCode: $NEW_VERSION_CODE"
+          echo "padded_version=$PADDED_VERSION" >> $GITHUB_OUTPUT
+          echo "New versionCode: $NEW_VERSION_CODE (tag: $PADDED_VERSION)"
 
       - name: Update versionCode in build.gradle.kts
         run: |
@@ -101,8 +104,8 @@ jobs:
         id: create_release
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: alpha-1.${{ steps.bump.outputs.new_version_code }}
-          name: alpha-1.${{ steps.bump.outputs.new_version_code }}
+          tag_name: ${{ steps.bump.outputs.padded_version }}
+          name: ${{ steps.bump.outputs.padded_version }}
           draft: false
           prerelease: true
           generate_release_notes: true
