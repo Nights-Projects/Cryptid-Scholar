@@ -59,8 +59,7 @@ jobs:
         id: bump
         run: |
           NEW_VERSION_CODE=$((${{ steps.version.outputs.current_version_code }} + 1))
-          # Format as XX with leading zero for alpha-1.XX format
-          PADDED_VERSION=$(printf "alpha-1.%02d" $NEW_VERSION_CODE)
+          PADDED_VERSION=$(printf "v.alpha1.%02d" $NEW_VERSION_CODE)
           echo "new_version_code=$NEW_VERSION_CODE" >> $GITHUB_OUTPUT
           echo "padded_version=$PADDED_VERSION" >> $GITHUB_OUTPUT
           echo "New versionCode: $NEW_VERSION_CODE (tag: $PADDED_VERSION)"
