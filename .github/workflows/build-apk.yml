@@ -44,6 +44,7 @@ jobs:
           curl -sL https://services.gradle.org/distributions/gradle-8.12.1-bin.zip -o /tmp/gradle.zip
           cd /tmp
           python3 -c "import zipfile; zipfile.ZipFile('/tmp/gradle.zip').extractall('/tmp/')"
+          chmod +x /tmp/gradle-8.12.1/bin/gradle
           /tmp/gradle-8.12.1/bin/gradle wrapper --gradle-version 8.12.1 --distribution-type bin
 
       - name: Generate APK Debug + Release
