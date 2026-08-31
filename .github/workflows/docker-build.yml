@@ -46,7 +46,7 @@ jobs:
           pip install ruff
 
       - name: Lint Python with Ruff
-        run: ruff check app.py admin_interface.py rebuild_database.py download_images.py generate_placeholders.py generate_icons.py crawl_new_cryptids.py test_cryptid_api.py
+        run: ruff check app.py admin_interface.py rebuild_database.py download_images.py generate_placeholders.py generate_icons.py crawl_new_cryptids.py test_cryptid_api.py run_tests.sh
 
       - name: Validate Admin HTML structure
         run: |
@@ -68,11 +68,15 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+          pip install pytest
 
-      - name: Run all tests (build DB + validate)
+      - name: Build database from seed
         run: |
-          chmod +x run_tests.sh
-          bash run_tests.sh
+          python rebuild_database.py --json-input cryptids_seed.json
+
+      - name: Run tests
+        run: |
+          python -m pytest test_cryptid_api.py -v --tb=long 2>&1 | cat
 
   build-and-push:
     name: Build and Push Docker Image

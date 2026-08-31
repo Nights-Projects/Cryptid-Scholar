@@ -4,7 +4,6 @@
 import json
 import sqlite3
 import sys
-import traceback
 from pathlib import Path
 
 # Ensure we can find the project root
@@ -31,7 +30,6 @@ def test_database():
         print(f"  Sample: {row['name']} ({row['type']}) — {row['country']}")
 
     conn.close()
-    return True
 
 
 def test_seed_json():
@@ -47,7 +45,6 @@ def test_seed_json():
     for c in cryptids[:3]:
         assert 'name' in c, f"Missing name in {c}"
         assert 'type' in c, f"Missing type in {c}"
-    return True
 
 
 def test_admin_blueprint():
@@ -55,7 +52,6 @@ def test_admin_blueprint():
     from admin_interface import admin_bp
     assert admin_bp is not None, "Admin blueprint not created"
     print("✓ Admin blueprint registered")
-    return True
 
 
 def test_flask_app():
@@ -69,37 +65,3 @@ def test_flask_app():
     assert '/api/stats' in rules, "Missing /api/stats route"
     assert '/admin/login' in rules, "Missing /admin/login route"
     print(f"✓ Routes verified: {[r for r in rules if r.startswith('/api') or r.startswith('/admin')]}")
-    return True
-
-
-if __name__ == '__main__':
-    print("Starting tests...")
-    print(f"Working directory: {Path.cwd()}")
-    print(f"Python path: {sys.path[:5]}")
-    tests = [
-        test_database,
-        test_seed_json,
-        test_admin_blueprint,
-        test_flask_app,
-    ]
-
-    failed = []
-    for test in tests:
-        try:
-            print(f"\nRunning {test.__name__}...")
-            test()
-            print(f"{test.__name__} PASSED")
-        except SystemExit as e:
-            print(f"✗ {test.__name__} SystemExit: {e}", file=sys.stderr)
-            traceback.print_exc()
-            failed.append(test.__name__)
-        except Exception as e:
-            print(f"✗ {test.__name__} FAILED: {e}", file=sys.stderr)
-            traceback.print_exc()
-            failed.append(test.__name__)
-
-    if failed:
-        print(f"\n❌ {len(failed)} test(s) failed: {failed}", file=sys.stderr)
-        sys.exit(1)
-    else:
-        print(f"\n✅ All {len(tests)} tests passed")
