@@ -83,7 +83,7 @@ ADMIN_TEMPLATE = '''
     <h2>Database Stats</h2>
     <table>
       <tr><th>Total Cryptids</th><td class="stat">{{ stats.total or 0 }}</td></tr>
-      <tr><th>Type Breakdown</th><td>{% for t in stats.types %}{{ t.type }}: {{ t.cnt }}{% if not loop.last %} | {% endif %}{% endfor %}</td></tr>
+      <tr><th>Type Breakdown</th><td><span style="color:#3498db">Aquatic</span>: {{ stats.type_counts.aquatic or 0 }} | <span style="color:#e74c3c">Terrestrial</span>: {{ stats.type_counts.terrestrial or 0 }} | <span style="color:#9b59b6">Flying</span>: {{ stats.type_counts.flying or 0 }}</td></tr>
       <tr><th>Countries Covered</th><td>{{ stats.countries|length if stats.countries else 0 }}</td></tr>
     </table>
   </div>
@@ -147,9 +147,20 @@ def dashboard():
             'SELECT DISTINCT country FROM cryptids WHERE country IS NOT NULL'
         ).fetchall()
         conn.close()
+
+        # Build type_counts dict for cleaner template display
+        type_counts = {}
+        for row in [dict(r) for r in types]:
+            type_counts[row['type']] = row['cnt']
+
         stats = {
             'total': total,
             'types': [dict(r) for r in types],
+            'type_counts': {
+                'aquatic': type_counts.get('aquatic', 0),
+                'terrestrial': type_counts.get('terrestrial', 0),
+                'flying': type_counts.get('flying', 0),
+            },
             'countries': [dict(r) for r in countries]
         }
     else:

@@ -4,6 +4,7 @@
 import json
 import sqlite3
 import sys
+import traceback
 from pathlib import Path
 
 # Ensure we can find the project root
@@ -64,4 +65,35 @@ def test_flask_app():
     assert '/api/cryptids' in rules, "Missing /api/cryptids route"
     assert '/api/stats' in rules, "Missing /api/stats route"
     assert '/admin/login' in rules, "Missing /admin/login route"
-    print(f"✓ Routes verified: {[r for r in rules if r.startswith('/api') or r.startswith('/admin')]}")
+    print("✓ Routes verified")
+
+
+if __name__ == '__main__':
+    print("Starting tests...")
+    tests = [
+        test_database,
+        test_seed_json,
+        test_admin_blueprint,
+        test_flask_app,
+    ]
+
+    failed = []
+    for test in tests:
+        try:
+            print(f"\nRunning {test.__name__}...")
+            test()
+            print(f"{test.__name__} PASSED")
+        except SystemExit as e:
+            print(f"✗ {test.__name__} SystemExit: {e}", file=sys.stderr)
+            traceback.print_exc()
+            failed.append(test.__name__)
+        except Exception as e:
+            print(f"✗ {test.__name__} FAILED: {e}", file=sys.stderr)
+            traceback.print_exc()
+            failed.append(test.__name__)
+
+    if failed:
+        print(f"\n❌ {len(failed)} test(s) failed: {failed}", file=sys.stderr)
+        sys.exit(1)
+    else:
+        print(f"\n✅ All {len(tests)} tests passed")
