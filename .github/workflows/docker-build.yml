@@ -75,6 +75,13 @@ jobs:
 
       - name: Run tests
         run: |
+          echo "=== Python version ==="
+          python --version
+          echo "=== Check installed packages ==="
+          pip list 2>/dev/null | grep -i -E "flask|werkzeug|gunicorn"
+          echo "=== Check DB exists ==="
+          ls -la cryptid_scholar.db
+          echo "=== Run tests ==="
           python test_cryptid_api.py
 
   build-and-push:
