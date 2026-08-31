@@ -74,15 +74,12 @@ jobs:
           python rebuild_database.py --json-input cryptids_seed.json
 
       - name: Run tests
+        shell: bash
         run: |
-          echo "=== Python version ==="
-          python --version
-          echo "=== Check installed packages ==="
-          pip list 2>/dev/null | grep -i -E "flask|werkzeug|gunicorn"
-          echo "=== Check DB exists ==="
-          ls -la cryptid_scholar.db
-          echo "=== Run tests ==="
-          python test_cryptid_api.py
+          bash -c 'echo "=== Python version ===" && python --version'
+          bash -c 'echo "=== Installed packages ===" && pip list 2>/dev/null | grep -i -E "flask|werkzeug|gunicorn"'
+          bash -c 'echo "=== Check DB ===" && ls -la cryptid_scholar.db'
+          bash -c 'echo "=== Run tests ===" && python test_cryptid_api.py'
 
   build-and-push:
     name: Build and Push Docker Image
