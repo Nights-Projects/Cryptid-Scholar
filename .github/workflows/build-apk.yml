@@ -15,6 +15,10 @@ jobs:
   build-apk:
     name: Build APK
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      packages: write
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -42,16 +46,29 @@ jobs:
           python3 -c "import zipfile, sys; zipfile.ZipFile(sys.argv[1]).extractall(sys.argv[2])" /tmp/gradle.zip /tmp
           chmod 755 /tmp/gradle-8.12.1/bin/gradle
 
+      - name: Read current version
+        id: version
+        run: |
+          # Extract versionCode from build.gradle.kts, or default to 1
+          VERSION_CODE=$(grep -oP 'versionCode\s*=\s*\K[0-9]+' android/app/build.gradle.kts 2>/dev/null || echo "1")
+          echo "current_version_code=$VERSION_CODE" >> $GITHUB_OUTPUT
+          echo "Current versionCode: $VERSION_CODE"
+
+      - name: Bump version code
+        id: bump
+        run: |
+          NEW_VERSION_CODE=$((${{ steps.version.outputs.current_version_code }} + 1))
+          echo "new_version_code=$NEW_VERSION_CODE" >> $GITHUB_OUTPUT
+          echo "New versionCode: $NEW_VERSION_CODE"
+
+      - name: Update versionCode in build.gradle.kts
+        run: |
+          sed -i "s/versionCode = [0-9]*/versionCode = ${{ steps.bump.outputs.new_version_code }}/" android/app/build.gradle.kts
+          echo "Updated versionCode to ${{ steps.bump.outputs.new_version_code }}"
+
       - name: Build with Gradle (no wrapper)
         run: |
           /tmp/gradle-8.12.1/bin/gradle -p android assembleDebug assembleRelease --no-daemon --stacktrace --build-cache
-
-      - name: Upload APK artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: cryptid-scholar-apk
-          path: android/app/build/outputs/apk/**/*.apk
-          if-no-files-found: error
 
       - name: Display APK info
         run: |
@@ -62,3 +79,52 @@ jobs:
           du -h android/app/build/outputs/apk/debug/*.apk 2>/dev/null || echo "No debug APK"
           echo "=== Release APK ==="
           du -h android/app/build/outputs/apk/release/*.apk 2>/dev/null || echo "No release APK"
+
+      - name: Upload APK artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: cryptid-scholar-apk-v${{ steps.bump.outputs.new_version_code }}
+          path: android/app/build/outputs/apk/**/*.apk
+          if-no-files-found: error
+
+      - name: Commit version bump back to repo
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git add android/app/build.gradle.kts
+          git commit -m "chore: bump versionCode to ${{ steps.bump.outputs.new_version_code }}" || echo "No changes to commit"
+          git push origin HEAD:${{ github.ref }} || echo "Push skipped (cannot push to protected branch)"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create GitHub Release
+        id: create_release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: alpha-1.${{ steps.bump.outputs.new_version_code }}
+          name: alpha-1.${{ steps.bump.outputs.new_version_code }}
+          draft: false
+          prerelease: true
+          generate_release_notes: true
+
+      - name: Upload Release APK to GitHub Release
+        uses: actions/upload-release-asset@v1
+        if: steps.create_release.outcome == 'success'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: android/app/build/outputs/apk/release/app-release.apk
+          asset_name: cryptid-scholar-v${{ steps.bump.outputs.new_version_code }}.apk
+          asset_content_type: application/vnd.android.package
+
+      - name: Upload Debug APK to GitHub Release
+        uses: actions/upload-release-asset@v1
+        if: steps.create_release.outcome == 'success'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: android/app/build/outputs/apk/debug/app-debug.apk
+          asset_name: cryptid-scholar-v${{ steps.bump.outputs.new_version_code }}-debug.apk
+          asset_content_type: application/vnd.android.package
