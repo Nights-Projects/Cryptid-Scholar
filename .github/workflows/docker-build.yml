@@ -46,7 +46,7 @@ jobs:
           pip install ruff
 
       - name: Lint Python with Ruff
-        run: ruff check app.py admin_interface.py rebuild_database.py download_images.py generate_placeholders.py generate_icons.py crawl_new_cryptids.py test_cryptid_api.py run_tests.sh
+        run: ruff check app.py admin_interface.py rebuild_database.py download_images.py generate_placeholders.py generate_icons.py crawl_new_cryptids.py test_cryptid_api.py
 
       - name: Validate Admin HTML structure
         run: |
