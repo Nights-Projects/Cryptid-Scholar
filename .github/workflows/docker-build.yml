@@ -75,9 +75,7 @@ jobs:
 
       - name: Run tests
         run: |
-          echo "Hello from CI"
-          python3 -c "print('Python works')"
-          python3 test_cryptid_api.py
+          python test_cryptid_api.py
 
   build-and-push:
     name: Build and Push Docker Image
