@@ -50,7 +50,7 @@ jobs:
         id: version
         run: |
           # Extract versionCode from build.gradle.kts, or default to 1
-          VERSION_CODE=$(grep -oP 'versionCode\\s*=\\s*\\K[0-9]+' android/app/build.gradle.kts 2>/dev/null || echo "1")
+          VERSION_CODE=$(grep -oP 'versionCode\s*=\s*\K[0-9]+' android/app/build.gradle.kts 2>/dev/null || echo "1")
           echo "current_version_code=$VERSION_CODE" >> $GITHUB_OUTPUT
           echo "Current versionCode: $VERSION_CODE"
 
@@ -69,14 +69,14 @@ jobs:
           sed -i "s/versionCode = [0-9]*/versionCode = ${{ steps.bump.outputs.new_version_code }}/" android/app/build.gradle.kts
           echo "Updated versionCode to ${{ steps.bump.outputs.new_version_code }}"
 
-      - name: Build with Gradle (no wrapper)
+      - name: Build with Gradle
         run: |
           /tmp/gradle-8.12.1/bin/gradle -p android assembleDebug assembleRelease --no-daemon --stacktrace --build-cache
 
       - name: Display APK info
         run: |
           echo "=== APK Files ==="
-          ls -la android/app/build/outputs/apk/
+          ls -la android/app/build/outputs/apk/ 2>/dev/null || echo "No APK output directory"
           echo ""
           echo "=== Debug APK ==="
           du -h android/app/build/outputs/apk/debug/*.apk 2>/dev/null || echo "No debug APK"
@@ -115,26 +115,29 @@ jobs:
           name: ${{ steps.bump.outputs.padded_version }}
           draft: false
           prerelease: true
-          generate_release_notes: true
-
-      - name: Upload Release APK to GitHub Release
-        uses: actions/upload-release-asset@v1
-        if: steps.create_release.outcome == 'success'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: android/app/build/outputs/apk/release/app-release-unsigned.apk
-          asset_name: cryptid-scholar-v${{ steps.bump.outputs.new_version_code }}.apk
-          asset_content_type: application/vnd.android.package
-
-      - name: Upload Debug APK to GitHub Release
-        uses: actions/upload-release-asset@v1
-        if: steps.create_release.outcome == 'success'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: android/app/build/outputs/apk/debug/app-debug.apk
-          asset_name: cryptid-scholar-v${{ steps.bump.outputs.new_version_code }}-debug.apk
-          asset_content_type: application/vnd.android.package
+          generate_release_notes: false
+          body: |
+            ## Cryptid Scholar - ${{ steps.bump.outputs.padded_version }}
+            
+            ### APK Files
+            
+            - **Debug APK**: [`cryptid-scholar-debug-apk-v${{ steps.bump.outputs.new_version_code }}.apk`](https://github.com/Nights-Projects/Cryptid-Scholar/releases/download/${{ steps.bump.outputs.padded_version }}/cryptid-scholar-debug-apk-v${{ steps.bump.outputs.new_version_code }}.apk)
+              - Includes debug logging enabled
+              - Logs saved to `/documents/cryptid-scholar-logs/` (max 8MB per file, 3 rotated logs)
+              - For troubleshooting only
+            
+            - **Release APK**: [`cryptid-scholar-release-apk-v${{ steps.bump.outputs.new_version_code }}.apk`](https://github.com/Nights-Projects/Cryptid-Scholar/releases/download/${{ steps.bump.outputs.padded_version }}/cryptid-scholar-release-apk-v${{ steps.bump.outputs.new_version_code }}.apk)
+              - Production ready, signed for release
+            
+            ### Debug Logging
+            
+            The debug APK includes rotating log files:
+            - Location: `/documents/cryptid-scholar-logs/`
+            - Max file size: 8MB
+            - Rotation: Up to 3 log files (debug.log, debug-1.log, debug-2.log)
+            - Enable: Debug builds only (BUILD_TYPE=debug)
+            
+            ### Installation
+            
+            Debug APK requires enabling "Install unknown apps" on your device.
+            Release APK is signed and ready for distribution.

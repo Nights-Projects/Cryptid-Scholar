@@ -18,7 +18,17 @@ android {
     }
 
     buildTypes {
+        debug {
+            // Enable debug logging and build config for debug builds
+            buildConfigField("boolean", "ENABLE_DEBUG_LOGGING", "true")
+            buildConfigField("String", "LOG_FILE_SIZE_BYTES", "8388608")  // 8MB
+            buildConfigField("String", "LOG_DIR_NAME", "cryptid-scholar-logs")
+            debuggable = true
+        }
         release {
+            buildConfigField("boolean", "ENABLE_DEBUG_LOGGING", "false")
+            buildConfigField("String", "LOG_FILE_SIZE_BYTES", "8388608")
+            buildConfigField("String", "LOG_DIR_NAME", "cryptid-scholar-logs")
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
@@ -33,6 +43,7 @@ android {
     }
 
     buildFeatures {
+        buildConfig = true  // Enable BuildConfig for debug/release flags
         // viewBinding = true  // Disabled - using findViewById
     }
 }
