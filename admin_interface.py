@@ -185,8 +185,8 @@ def action_rebuild():
             'output': result.stdout,
             'stderr': result.stderr
         })
-    except Exception as e:
-        return jsonify({'success': False, 'error': str(e)}), 500
+    except Exception:
+        return jsonify({'success': False, 'error': 'Rebuild failed'}), 500
 
 
 @admin_bp.route('/actions/update', methods=['POST'])
@@ -212,5 +212,5 @@ def action_update():
             'rebuild_output': result2.stdout,
             'stderr': result.stderr + result2.stderr
         })
-    except Exception as e:
-        return jsonify({'success': False, 'error': str(e)}), 500
+    except Exception:
+        return jsonify({'success': False, 'error': 'Update failed'}), 500
