@@ -10,10 +10,3 @@ buildscript {
         classpath("androidx.compose:compose-bom:$composeVersion")
     }
 }
-
-allprojects {
-    repositories {
-        google()
-        mavenCentral()
-    }
-}
