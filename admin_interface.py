@@ -6,13 +6,19 @@ Built as a Flask blueprint to be registered in the main app.
 """
 
 import os
+import sqlite3
 from pathlib import Path
+
 from flask import (
-    Blueprint, request, render_template_string,
-    jsonify, redirect, url_for, session, Response
+    Blueprint,
+    jsonify,
+    redirect,
+    render_template_string,
+    request,
+    session,
+    url_for,
 )
 from werkzeug.security import check_password_hash
-import sqlite3
 
 admin_bp = Blueprint('admin', __name__, url_prefix='/admin')
 
