@@ -40,7 +40,6 @@ def test_seed_json():
     print(f"✓ Seed JSON valid: {len(cryptids)} cryptids")
     assert len(cryptids) > 0, "Seed JSON is empty"
 
-    # Check required fields
     for c in cryptids[:3]:
         assert 'name' in c, f"Missing name in {c}"
         assert 'type' in c, f"Missing type in {c}"
@@ -61,7 +60,6 @@ def test_flask_app():
     assert app is not None, "Flask app not created"
     print("✓ Flask app imports successfully")
 
-    # Verify API routes exist
     rules = [rule.rule for rule in app.url_map.iter_rules()]
     assert '/api/cryptids' in rules, "Missing /api/cryptids route"
     assert '/api/stats' in rules, "Missing /api/stats route"
@@ -71,6 +69,7 @@ def test_flask_app():
 
 
 if __name__ == '__main__':
+    print("Starting tests...")
     tests = [
         test_database,
         test_seed_json,
@@ -81,9 +80,12 @@ if __name__ == '__main__':
     failed = []
     for test in tests:
         try:
+            print(f"\nRunning {test.__name__}...")
             test()
+            print(f"{test.__name__} PASSED")
         except SystemExit as e:
             print(f"✗ {test.__name__} SystemExit: {e}", file=sys.stderr)
+            traceback.print_exc()
             failed.append(test.__name__)
         except Exception as e:
             print(f"✗ {test.__name__} FAILED: {e}", file=sys.stderr)
