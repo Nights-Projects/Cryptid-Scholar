@@ -83,7 +83,7 @@ ADMIN_TEMPLATE = '''
     <h2>Database Stats</h2>
     <table>
       <tr><th>Total Cryptids</th><td class="stat">{{ stats.total or 0 }}</td></tr>
-      <tr><th>Type Breakdown</th><td>Aquatic: {{ stats.types[0].cnt if stats.types else 0 }} | Terrestrial: {{ stats.types[1].cnt if stats.types|length > 1 and stats.types[1].type == 'terrestrial' else stats.types.1.cnt if stats.types|length > 1 else 0 }} | Flying: {{ stats.flying or 0 }}</td></tr>
+      <tr><th>Type Breakdown</th><td>{% for t in stats.types %}{{ t.type }}: {{ t.cnt }}{% if not loop.last %} | {% endif %}{% endfor %}</td></tr>
       <tr><th>Countries Covered</th><td>{{ stats.countries|length if stats.countries else 0 }}</td></tr>
     </table>
   </div>
