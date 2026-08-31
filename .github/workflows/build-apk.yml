@@ -35,7 +35,7 @@ jobs:
             ~/.gradle/caches
             ~/.gradle/wrapper
             ~/.android/build-cache
-          key: ${{ runner.os }}-gradle-${{ hashFiles('app/build.gradle', 'gradle.properties') }}
+          key: ${{ runner.os }}-gradle-${{ hashFiles('android/app/build.gradle', 'android/gradle.properties') }}
           restore-keys: |
             ${{ runner.os }}-gradle-
 
