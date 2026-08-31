@@ -75,6 +75,7 @@ jobs:
 
       - name: Run tests
         run: |
+          ls -la test_cryptid_api.py
           python test_cryptid_api.py
 
   build-and-push:
