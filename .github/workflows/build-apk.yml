@@ -15,9 +15,6 @@ jobs:
   build-apk:
     name: Build APK
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: android
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -39,32 +36,30 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gradle-
 
-      - name: Initialize Gradle wrapper
+      - name: Download and extract Gradle
         run: |
           curl -sL https://services.gradle.org/distributions/gradle-8.12.1-bin.zip -o /tmp/gradle.zip
-          cd /tmp
-          python3 -c "import zipfile; zipfile.ZipFile('/tmp/gradle.zip').extractall('/tmp/')"
-          /tmp/gradle-8.12.1/bin/gradle wrapper --gradle-version 8.12.1 --distribution-type bin
+          python3 -c "import zipfile, sys; zipfile.ZipFile(sys.argv[1]).extractall(sys.argv[2])" /tmp/gradle.zip /tmp
+          # Fix permission via base permissions, not chmod (chmod might be blocked by sandbox)
+          chmod 755 /tmp/gradle-8.12.1/bin/gradle
 
-      - name: Generate APK Debug + Release
+      - name: Build with Gradle (no wrapper)
         run: |
-          chmod +x gradlew
-          ./gradlew assembleDebug --no-daemon --stacktrace
-          ./gradlew assembleRelease --no-daemon --stacktrace --build-cache
+          /tmp/gradle-8.12.1/bin/gradle -p android assembleDebug assembleRelease --no-daemon --stacktrace --build-cache
 
       - name: Upload APK artifacts
         uses: actions/upload-artifact@v4
         with:
           name: cryptid-scholar-apk
-          path: app/build/outputs/apk/**/*.apk
+          path: android/app/build/outputs/apk/**/*.apk
           if-no-files-found: error
 
       - name: Display APK info
         run: |
           echo "=== APK Files ==="
-          ls -la app/build/outputs/apk/
+          ls -la android/app/build/outputs/apk/
           echo ""
           echo "=== Debug APK ==="
-          du -h app/build/outputs/apk/debug/*.apk 2>/dev/null || echo "No debug APK"
+          du -h android/app/build/outputs/apk/debug/*.apk 2>/dev/null || echo "No debug APK"
           echo "=== Release APK ==="
-          du -h app/build/outputs/apk/release/*.apk 2>/dev/null || echo "No release APK"
+          du -h android/app/build/outputs/apk/release/*.apk 2>/dev/null || echo "No release APK"
