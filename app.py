@@ -1,16 +1,20 @@
 #!/usr/bin/env python3
 """
-Cryptid Scholar - Mobile-first PWA for learning about cryptids from around the world.
+Cryptid Scholar - Mobile-first API server for learning about cryptids from around the world.
 Adapted from Breed Scholar for the cryptozoology community.
+Serves JSON API (port 9004) + authenticated Admin UI (port 9005)
 """
 
 import os
 import sqlite3
 from pathlib import Path
 
-from flask import Flask, jsonify, render_template, request, send_file
+from flask import Flask, jsonify, request, send_file
+
+from admin_interface import admin_bp
 
 app = Flask(__name__)
+app.secret_key = os.environ.get('SECRET_KEY', 'default-dev-key')
 
 BASE_DIR = Path(os.environ.get('BASE_DIR', '/root/cryptid-scholar'))
 DB_PATH = Path(os.environ.get('DATABASE_URL', str(BASE_DIR / 'cryptid_scholar.db')))
@@ -18,6 +22,9 @@ THUMBS_DIR = Path(os.environ.get('THUMBS_DIR', str(BASE_DIR / 'static' / 'thumbs
 FULL_DIR = Path(os.environ.get('FULL_DIR', str(BASE_DIR / 'static' / 'full')))
 THUMBS_DIR.mkdir(parents=True, exist_ok=True)
 FULL_DIR.mkdir(parents=True, exist_ok=True)
+
+# Register admin blueprint (served on /admin/*)
+app.register_blueprint(admin_bp)
 
 # Cryptid type colors
 TYPE_COLORS = {
@@ -31,11 +38,6 @@ def get_db():
     conn = sqlite3.connect(str(DB_PATH))
     conn.row_factory = sqlite3.Row
     return conn
-
-
-@app.route('/')
-def index():
-    return render_template('index.html')
 
 
 @app.route('/api/cryptids/all')
@@ -93,7 +95,7 @@ def list_cryptids():
         LIMIT ? OFFSET ?
     '''
     offset = (page - 1) * per_page
-    cursor = db.execute(query, base_params + [per_page, offset])
+    cursor = db.execute(query, [*base_params, per_page, offset])
     cryptids = [dict(row) for row in cursor.fetchall()]
 
     count_query = f'SELECT COUNT(DISTINCT c.id) FROM cryptids c {base_where}'
@@ -140,13 +142,11 @@ def get_stats():
     terrestrial = db.execute('SELECT COUNT(*) FROM cryptids WHERE type = ?', ('terrestrial',)).fetchone()[0]
     flying = db.execute('SELECT COUNT(*) FROM cryptids WHERE type = ?', ('flying',)).fetchone()[0]
 
-    # Count by country
     country_counts = db.execute('''
         SELECT country, COUNT(*) as cnt FROM cryptids WHERE country IS NOT NULL
         GROUP BY country ORDER BY cnt DESC LIMIT 10
     ''').fetchall()
 
-    # Count by type
     type_counts = db.execute('''
         SELECT type, COUNT(*) as cnt FROM cryptids GROUP BY type ORDER BY cnt DESC
     ''').fetchall()
@@ -239,23 +239,15 @@ def serve_full(filename):
     return jsonify({'error': 'Image not cached'}), 404
 
 
-@app.route('/manifest.json')
-def manifest():
-    return jsonify({
-        "name": "Cryptid Scholar",
-        "short_name": "CryptidScholar",
-        "description": "Learn about cryptids from around the world — images, flashcards, and quizzes",
-        "start_url": "/",
-        "display": "standalone",
-        "background_color": "#0a001a",
-        "theme_color": "#6a0dad",
-        "orientation": "portrait",
-        "icons": [
-            {"src": "/static/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable"},
-            {"src": "/static/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable"}
-        ]
-    })
+@app.route('/health')
+def health():
+    """Health check endpoint."""
+    return jsonify({'status': 'healthy', 'service': 'cryptid-scholar-api'})
+
+
+# Admin UI routes are handled by admin_interface.py blueprint (port 9005 via gunicorn)
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    port = int(os.environ.get('API_PORT', 9004))
+    app.run(host='0.0.0.0', port=port, debug=os.environ.get('FLASK_DEBUG', 'false').lower() == 'true')
