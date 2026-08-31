@@ -1,0 +1,13 @@
+## Gradle
+*.apk
+*.ap_
+*.aab
+.gradle/
+build/
+captures/
+.externalNativeBuild/
+.cxx/
+local.properties
+.gradle
+gradlew
+gradle/wrapper/gradle-wrapper.properties

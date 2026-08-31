@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#140028">
+
+    <TextView
+        android:id="@+id/cryptidName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text_color="#F1C40F"
+        android:text_size="18sp"
+        android:text_style="bold" />
+
+    <TextView
+        android:id="@+id/cryptidType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text_color="#625FA6"
+        android:text_size="14sp"
+        android:layout_marginTop="4dp" />
+
+    <TextView
+        android:id="@+id/cryptidCountry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text_color="#625FA6"
+        android:text_size="14sp"
+        android:layout_marginTop="2dp" />
+
+</LinearLayout>

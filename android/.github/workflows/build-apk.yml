@@ -1,0 +1,70 @@
+name: Build Android APK
+
+on:
+  push:
+    branches: ["main", "master"]
+    paths:
+      - "android/**"
+  pull_request:
+    branches: ["main", "master"]
+    paths:
+      - "android/**"
+  workflow_dispatch:
+
+jobs:
+  build-apk:
+    name: Build APK
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: android
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Cache Gradle packages
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+            ~/.android/build-cache
+          key: ${{ runner.os }}-gradle-${{ hashFiles('app/build.gradle', 'gradle.properties') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle-
+
+      - name: Initialize Gradle wrapper
+        run: |
+          curl -sL https://services.gradle.org/distributions/gradle-8.12.1-bin.zip -o /tmp/gradle.zip
+          cd /tmp
+          python3 -c "import zipfile; zipfile.ZipFile('/tmp/gradle.zip').extractall('/tmp/')"
+          /tmp/gradle-8.12.1/bin/gradle wrapper --gradle-version 8.12.1 --distribution-type bin
+
+      - name: Generate APK Debug + Release
+        run: |
+          chmod +x gradlew
+          ./gradlew assembleDebug --no-daemon --stacktrace
+          ./gradlew assembleRelease --no-daemon --stacktrace --build-cache
+
+      - name: Upload APK artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: cryptid-scholar-apk
+          path: app/build/outputs/apk/**/*.apk
+          if-no-files-found: error
+
+      - name: Display APK info
+        run: |
+          echo "=== APK Files ==="
+          ls -la app/build/outputs/apk/
+          echo ""
+          echo "=== Debug APK ==="
+          du -h app/build/outputs/apk/debug/*.apk 2>/dev/null || echo "No debug APK"
+          echo "=== Release APK ==="
+          du -h app/build/outputs/apk/release/*.apk 2>/dev/null || echo "No release APK"
