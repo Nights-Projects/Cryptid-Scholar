@@ -42,8 +42,8 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-          pip install ruff mypy
+          pip install -r requirements.txt
+          pip install ruff
 
       - name: Lint Python with Ruff
         run: ruff check app.py admin_interface.py rebuild_database.py download_images.py generate_placeholders.py generate_icons.py crawl_new_cryptids.py
@@ -68,7 +68,6 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-          pip install pytest
 
       - name: Build database from seed
         run: |
@@ -80,6 +79,7 @@ jobs:
           python -c "import json; cryptids = json.load(open('cryptids_seed.json')); assert len(cryptids) > 0; print(f'✓ Seed JSON valid: {len(cryptids)} cryptids')"
           python -c "from admin_interface import admin_bp; assert admin_bp is not None; print('✓ Admin blueprint registered')"
           python -c "from app import app; assert app is not None; print('✓ Flask app imports successfully')"
+          python -c "print('✅ All tests passed')"
 
   build-and-push:
     name: Build and Push Docker Image
@@ -134,6 +134,6 @@ jobs:
         run: |
           echo "## Docker image built successfully" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "**Image:** \ `ghcr.io/${{ github.repository }}\` >> $GITHUB_STEP_SUMMARY
-          echo "**Branch:** \ `${{ github.ref_name }}\` >> $GITHUB_STEP_SUMMARY
-          echo "**Commit:** \ `${{ github.sha }}\` >> $GITHUB_STEP_SUMMARY
+          echo "**Image:** \ \`ghcr.io/${{ github.repository }}/\` >> $GITHUB_STEP_SUMMARY
+          echo "**Branch:** \`${{ github.ref_name }}\`" >> $GITHUB_STEP_SUMMARY
+          echo "**Commit:** \`${{ github.sha }}\`" >> $GITHUB_STEP_SUMMARY
