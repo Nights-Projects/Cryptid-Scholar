@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """Test suite for Cryptid Scholar — runs in CI to validate the build."""
 
-import os
-import sys
 import json
 import sqlite3
+import sys
+import traceback
 from pathlib import Path
 
 
@@ -82,8 +82,12 @@ if __name__ == '__main__':
     for test in tests:
         try:
             test()
+        except SystemExit as e:
+            print(f"✗ {test.__name__} SystemExit: {e}", file=sys.stderr)
+            failed.append(test.__name__)
         except Exception as e:
             print(f"✗ {test.__name__} FAILED: {e}", file=sys.stderr)
+            traceback.print_exc()
             failed.append(test.__name__)
 
     if failed:
