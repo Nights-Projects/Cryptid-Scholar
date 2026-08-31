@@ -114,7 +114,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: android/app/build/outputs/apk/release/app-release.apk
+          asset_path: android/app/build/outputs/apk/release/app-release-unsigned.apk
           asset_name: cryptid-scholar-v${{ steps.bump.outputs.new_version_code }}.apk
           asset_content_type: application/vnd.android.package
 
