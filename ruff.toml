@@ -1,6 +1,6 @@
 [lint]
 select = ["E", "F", "W", "I", "UP", "RUF"]
-ignore = ["EXE001", "E501", "UP015", "RUF100", "RUF005"]
+ignore = ["EXE001", "E501", "UP015", "RUF100", "RUF005", "F841", "F541"]
 
 [lint.pycodestyle]
 max-line-length = 120

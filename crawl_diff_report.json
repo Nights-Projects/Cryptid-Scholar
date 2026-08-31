@@ -1,0 +1,1944 @@
+{
+  "new": [
+    {
+      "name": "Anguila peluda",
+      "type": "terrestrial",
+      "other_names": "Hairy Eel",
+      "country": "Canary Islands",
+      "location": "Pamital ravine, Canary Islands",
+      "description": "Pond animal",
+      "fact": "",
+      "tips": "",
+      "image_url": "",
+      "source_url": "https://en.wikipedia.org/wiki/Anguila_peluda",
+      "cultural_origin": "Canary Islands",
+      "first_recorded": "Unknown"
+    },
+    {
+      "name": "Dobhar-chú",
+      "type": "terrestrial",
+      "other_names": "Water Hound, King Otter",
+      "country": "Ireland",
+      "location": "Ireland",
+      "description": "Extra-large otter -like carnivorous aquatic mammal",
+      "fact": "",
+      "tips": "",
+      "image_url": "",
+      "source_url": "https://en.wikipedia.org/wiki/Dobhar-chú",
+      "cultural_origin": "Ireland",
+      "first_recorded": "Unknown"
+    },
+    {
+      "name": "Gloucester sea serpent",
+      "type": "aquatic",
+      "other_names": "",
+      "country": "United States",
+      "location": "Gloucester, Massachusetts ( Cape Ann ), United States",
+      "description": "Large serpent",
+      "fact": "",
+      "tips": "",
+      "image_url": "",
+      "source_url": "https://en.wikipedia.org/wiki/Gloucester_sea_serpent",
+      "cultural_origin": "United States",
+      "first_recorded": "Unknown"
+    },
+    {
+      "name": "Ground Shark",
+      "type": "terrestrial",
+      "other_names": "",
+      "country": "Timor Sea",
+      "location": "Timor Sea",
+      "description": "Man-eating shark that lacks a prominent dorsal fin and lies in wait for its prey on the seafloor",
+      "fact": "",
+      "tips": "",
+      "image_url": "",
+      "source_url": "https://en.wikipedia.org/wiki/Ground_shark_(cryptid)",
+      "cultural_origin": "Timor Sea",
+      "first_recorded": "Unknown"
+    },
+    {
+      "name": "Labynkyr Devil",
+      "type": "aquatic",
+      "other_names": "Labynkyrsky Chert [ citation needed ]",
+      "country": "Russia",
+      "location": "Oymyakonsky Ulus , Sakha Republic, Russia",
+      "description": "Lake monster",
+      "fact": "",
+      "tips": "",
+      "image_url": "",
+      "source_url": "https://en.wikipedia.org/wiki/Labynkyr_Devil",
+      "cultural_origin": "Russia",
+      "first_recorded": "Unknown"
+    },
+    {
+      "name": "Manipogo",
+      "type": "aquatic",
+      "other_names": "Winnipogo",
+      "country": "Canada",
+      "location": "Lake Manitoba , Manitoba, Canada",
+      "description": "Lake monster",
+      "fact": "",
+      "tips": "",
+      "image_url": "",
+      "source_url": "https://en.wikipedia.org/wiki/Manipogo",
+      "cultural_origin": "Canada",
+      "first_recorded": "Unknown"
+    },
+    {
+      "name": "Mbielu-mbielu-mbielu",
+      "type": "aquatic",
+      "other_names": "",
+      "country": "Democratic Republic of the Congo",
+      "location": "Democratic Republic of the Congo",
+      "description": "Stegosaurid dinosaur (lake, river and/or swamp monster)",
+      "fact": "",
+      "tips": "",
+      "image_url": "",
+      "source_url": "https://en.wikipedia.org/wiki/Mbielu-mbielu-mbielu",
+      "cultural_origin": "Democratic Republic of the Congo",
+      "first_recorded": "Unknown"
+    },
+    {
+      "name": "Montauk Monster",
+      "type": "terrestrial",
+      "other_names": "",
+      "country": "United States",
+      "location": "Montauk, New York , United States",
+      "description": "Small bald beaked mammal",
+      "fact": "",
+      "tips": "",
+      "image_url": "",
+      "source_url": "https://en.wikipedia.org/wiki/Montauk_Monster",
+      "cultural_origin": "United States",
+      "first_recorded": "Unknown"
+    },
+    {
+      "name": "Morgawr",
+      "type": "aquatic",
+      "other_names": "",
+      "country": "United Kingdom",
+      "location": "Falmouth Bay , Cornwall, United Kingdom",
+      "description": "Sea serpent",
+      "fact": "",
+      "tips": "",
+      "image_url": "",
+      "source_url": "https://en.wikipedia.org/wiki/Morgawr_(folklore)",
+      "cultural_origin": "United Kingdom",
+      "first_recorded": "Unknown"
+    },
+    {
+      "name": "Steller's sea ape",
+      "type": "terrestrial",
+      "other_names": "",
+      "country": "Northern Pacific Ocean",
+      "location": "Northern Pacific Ocean",
+      "description": "Sea animal",
+      "fact": "",
+      "tips": "",
+      "image_url": "",
+      "source_url": "https://en.wikipedia.org/wiki/Steller's_sea_ape",
+      "cultural_origin": "Northern Pacific Ocean",
+      "first_recorded": "Unknown"
+    },
+    {
+      "name": "British big cats",
+      "type": "terrestrial",
+      "other_names": "Alien big cats (ABCs), phantom cats , mystery cats, English lions, Beast of Bodmin , Beast of Exmoor",
+      "country": "Great Britain",
+      "location": "Great Britain",
+      "description": "Non-native, wild big cats",
+      "fact": "",
+      "tips": "",
+      "image_url": "",
+      "source_url": "https://en.wikipedia.org/wiki/British_big_cats",
+      "cultural_origin": "Great Britain",
+      "first_recorded": "Unknown"
+    },
+    {
+      "name": "Grafton monster",
+      "type": "terrestrial",
+      "other_names": "",
+      "country": "West Virginia",
+      "location": "Grafton, West Virginia",
+      "description": "A tall, pale headless figure who produces strange whistling noises. [ 49 ]",
+      "fact": "",
+      "tips": "",
+      "image_url": "",
+      "source_url": "https://en.wikipedia.org/wiki/Grafton_monster",
+      "cultural_origin": "West Virginia",
+      "first_recorded": "Unknown"
+    },
+    {
+      "name": "Katanga Snake",
+      "type": "terrestrial",
+      "other_names": "",
+      "country": "Democratic Republic of the Congo",
+      "location": "Katanga Province , Democratic Republic of the Congo",
+      "description": "Greenish-Brown 50-foot long snake with a horse-like head [ 54 ]",
+      "fact": "",
+      "tips": "",
+      "image_url": "",
+      "source_url": "https://en.wikipedia.org/wiki/Remy_Van_Lierde#Alleged_encounter_with_a_giant_snake",
+      "cultural_origin": "Democratic Republic of the Congo",
+      "first_recorded": "Unknown"
+    },
+    {
+      "name": "Queensland Tiger",
+      "type": "terrestrial",
+      "other_names": "Yarri",
+      "country": "Australia",
+      "location": "Queensland , Australia",
+      "description": "Large feline",
+      "fact": "",
+      "tips": "",
+      "image_url": "",
+      "source_url": "https://en.wikipedia.org/wiki/Queensland_tiger",
+      "cultural_origin": "Australia",
+      "first_recorded": "Unknown"
+    },
+    {
+      "name": "Bukit Timah Monkey Man",
+      "type": "terrestrial",
+      "other_names": "BTM, BTMM",
+      "country": "Singapore",
+      "location": "Singapore",
+      "description": "Forest-dwelling hominid or other primate",
+      "fact": "",
+      "tips": "",
+      "image_url": "",
+      "source_url": "https://en.wikipedia.org/wiki/Bukit_Timah_Monkey_Man",
+      "cultural_origin": "Singapore",
+      "first_recorded": "Unknown"
+    }
+  ],
+  "updated": [
+    {
+      "name": "Beast of Busco",
+      "changes": {
+        "location": {
+          "from": "Churubusco, Indiana",
+          "to": "Churubusco, Indiana , United States"
+        },
+        "other_names": {
+          "from": "Oscar",
+          "to": "Oscar [ 12 ]"
+        }
+      },
+      "enrichments": {
+        "cultural_origin": {
+          "from": "",
+          "to": "United States"
+        },
+        "first_recorded": {
+          "from": "",
+          "to": "Unknown"
+        }
+      },
+      "seed_record": {
+        "name": "Beast of Busco",
+        "type": "aquatic",
+        "other_names": "Oscar",
+        "country": "United States",
+        "location": "Churubusco, Indiana",
+        "description": "Giant snapping turtle reported in a lake in Churubusco, Indiana. Said to be a large, prehistoric turtle that has been living in the lake for decades.",
+        "fact": "The Beast of Busco was first reported in the 1940s. A farmer named Gale Henderson claimed to have caught a massive snapping turtle in a lake near Churubusco. The turtle was estimated to be 200+ pounds and the size of a washtub. The creature has been the subject of numerous investigations and local festivals.",
+        "tips": "Look for a creature described as a giant snapping turtle, about 5-6 feet long with a shell the size of a washtub. The creature is said to be extremely old and to avoid human contact. It is described as having a long neck and powerful jaws.",
+        "image_url": "",
+        "source_url": "https://en.wikipedia.org/wiki/Beast_of_Busco"
+      },
+      "wiki_record": {
+        "name": "Beast of Busco",
+        "type": "terrestrial",
+        "other_names": "Oscar [ 12 ]",
+        "country": "United States",
+        "location": "Churubusco, Indiana , United States",
+        "description": "Giant snapping turtle",
+        "fact": "",
+        "tips": "",
+        "image_url": "",
+        "source_url": "https://en.wikipedia.org/wiki/Beast_of_Busco",
+        "cultural_origin": "United States",
+        "first_recorded": "Unknown"
+      }
+    },
+    {
+      "name": "Cadborosaurus",
+      "changes": {
+        "country": {
+          "from": "Canada, United States",
+          "to": "Pacific Coast of North America"
+        }
+      },
+      "enrichments": {
+        "cultural_origin": {
+          "from": "",
+          "to": "Pacific Coast of North America"
+        },
+        "first_recorded": {
+          "from": "",
+          "to": "Unknown"
+        }
+      },
+      "seed_record": {
+        "name": "Cadborosaurus",
+        "type": "aquatic",
+        "other_names": "Caddy, Cadborosaur",
+        "country": "Canada, United States",
+        "location": "Pacific Coast of North America",
+        "description": "Cryptid said to inhabit the Pacific Coast of North America. Described as a large, aquatic creature with a long neck and horse-like head.",
+        "fact": "The Cadborosaurus was first reported in 1798 by a British captain off the coast of British Columbia. The creature was described as a large, aquatic creature with a long neck and a horse-like head. It has been reported by numerous sailors and fishermen over the centuries. Some researchers believe it may be a surviving population of pliosaurs or plesiosaurs.",
+        "tips": "Look for a creature with a long neck and a horse-like head, about 15-20 feet long. The creature is said to have a hump on its back and to move in a serpentine motion. It is described as having a gray, scaly hide and small eyes.",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/47/Cadborosaurus_October_1937.jpg",
+        "source_url": "https://en.wikipedia.org/wiki/Cadborosaurus"
+      },
+      "wiki_record": {
+        "name": "Cadborosaurus",
+        "type": "terrestrial",
+        "other_names": "Caddy",
+        "country": "Pacific Coast of North America",
+        "location": "Pacific Coast of North America",
+        "description": "Sea animal",
+        "fact": "",
+        "tips": "",
+        "image_url": "",
+        "source_url": "https://en.wikipedia.org/wiki/Cadborosaurus",
+        "cultural_origin": "Pacific Coast of North America",
+        "first_recorded": "Unknown"
+      }
+    },
+    {
+      "name": "Iemisch",
+      "changes": {
+        "country": {
+          "from": "Argentina",
+          "to": "Patagonian region of Argentina"
+        },
+        "location": {
+          "from": "Patagonia region, Argentina",
+          "to": "Patagonian region of Argentina"
+        }
+      },
+      "enrichments": {
+        "cultural_origin": {
+          "from": "",
+          "to": "Patagonian region of Argentina"
+        },
+        "first_recorded": {
+          "from": "",
+          "to": "Unknown"
+        }
+      },
+      "seed_record": {
+        "name": "Iemisch",
+        "type": "terrestrial",
+        "other_names": "Iemisch Listai",
+        "country": "Argentina",
+        "location": "Patagonia region, Argentina",
+        "description": "Cryptid reported in the Patagonian region of Argentina. Described as a creature with features of both a cat and an otter, sometimes called a 'jaguar-otter'.",
+        "fact": "The Iemisch was first reported by the Ona people of Argentina in the early 20th century. It is described as a creature with features of both a jaguar and an otter, with a long, muscular body and short legs. Some researchers believe it may be a surviving population of the jaguarundi, a small wild cat.",
+        "tips": "Look for a creature about the size of a large dog, with the body of an otter and the head of a jaguar. The creature is said to be a good swimmer and to have a strong, musky odor. It has short legs and a long, muscular body.",
+        "image_url": "",
+        "source_url": "https://en.wikipedia.org/wiki/Iemisch"
+      },
+      "wiki_record": {
+        "name": "Iemisch",
+        "type": "terrestrial",
+        "other_names": "Iemisch Listai",
+        "country": "Patagonian region of Argentina",
+        "location": "Patagonian region of Argentina",
+        "description": "Mix of a jaguar and otter",
+        "fact": "",
+        "tips": "",
+        "image_url": "",
+        "source_url": "https://en.wikipedia.org/wiki/Iemisch",
+        "cultural_origin": "Patagonian region of Argentina",
+        "first_recorded": "Unknown"
+      }
+    },
+    {
+      "name": "Igopogo",
+      "changes": {
+        "location": {
+          "from": "Lake Simcoe, Ontario, Canada",
+          "to": "Lake Simcoe, Ontario , Canada"
+        }
+      },
+      "enrichments": {
+        "cultural_origin": {
+          "from": "",
+          "to": "Canada"
+        },
+        "first_recorded": {
+          "from": "",
+          "to": "Unknown"
+        }
+      },
+      "seed_record": {
+        "name": "Igopogo",
+        "type": "aquatic",
+        "other_names": "Kempenfelt Kelly",
+        "country": "Canada",
+        "location": "Lake Simcoe, Ontario, Canada",
+        "description": "Lake monster said to inhabit Lake Simcoe in Ontario, Canada. Described as a large, serpentine creature similar to the Loch Ness Monster.",
+        "fact": "The Igopogo was first reported in the 19th century. Locals have reported sightings of a large, serpentine creature in Lake Simcoe. The creature is said to be about 20-30 feet long with a horse-like head and a long neck. It is similar to the Loch Ness Monster but is said to be more aggressive.",
+        "tips": "Look for a creature about 20-30 feet long with a horse-like head and a long neck. The creature is said to appear in the summer months and to be more active during calm weather. It is described as having a gray, serpentine body and small eyes.",
+        "image_url": "",
+        "source_url": "https://en.wikipedia.org/wiki/Igopogo"
+      },
+      "wiki_record": {
+        "name": "Igopogo",
+        "type": "aquatic",
+        "other_names": "Kempenfelt Kelly",
+        "country": "Canada",
+        "location": "Lake Simcoe, Ontario , Canada",
+        "description": "Lake monster",
+        "fact": "",
+        "tips": "",
+        "image_url": "",
+        "source_url": "https://en.wikipedia.org/wiki/Igopogo",
+        "cultural_origin": "Canada",
+        "first_recorded": "Unknown"
+      }
+    },
+    {
+      "name": "Loch Ness Monster",
+      "changes": {
+        "location": {
+          "from": "Loch Ness",
+          "to": "Loch Ness , Scotland"
+        }
+      },
+      "enrichments": {
+        "cultural_origin": {
+          "from": "",
+          "to": "Scotland"
+        },
+        "first_recorded": {
+          "from": "",
+          "to": "Unknown"
+        }
+      },
+      "seed_record": {
+        "name": "Loch Ness Monster",
+        "type": "aquatic",
+        "other_names": "Nessie",
+        "country": "Scotland",
+        "location": "Loch Ness",
+        "description": "Large unexplained aquatic animal said to inhabit the depths of Loch Ness in the Scottish Highlands. Most commonly described as a large, long-necked reptilian creature.",
+        "fact": "Nessie is the most famous lake monster in the world. The first sighting was recorded in 565 AD by Saint Columba, who allegedly saved a man from a water horse attack in the River Ness. Over 1,000 sightings have been reported, with the famous 'Surgeon's Photo' from 1934 being the most iconic (though later revealed as a hoax).",
+        "tips": "Look for a long neck breaking the water's surface, a small head, and humps or a back emerging from the water. Most sightings occur in the northern reach of Loch Ness near Drumnadrochit.",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/68/Lochneska_poboba_museumofnessie_cropped.jpg",
+        "source_url": "https://en.wikipedia.org/wiki/Loch_Ness_Monster"
+      },
+      "wiki_record": {
+        "name": "Loch Ness Monster",
+        "type": "aquatic",
+        "other_names": "Nessie",
+        "country": "Scotland",
+        "location": "Loch Ness , Scotland",
+        "description": "Lake monster",
+        "fact": "",
+        "tips": "",
+        "image_url": "",
+        "source_url": "https://en.wikipedia.org/wiki/Loch_Ness_Monster",
+        "cultural_origin": "Scotland",
+        "first_recorded": "Unknown"
+      }
+    },
+    {
+      "name": "Loveland Frog",
+      "changes": {
+        "location": {
+          "from": "Loveland, Ohio",
+          "to": "Loveland, Ohio , United States"
+        }
+      },
+      "enrichments": {
+        "cultural_origin": {
+          "from": "",
+          "to": "United States"
+        },
+        "first_recorded": {
+          "from": "",
+          "to": "Unknown"
+        }
+      },
+      "seed_record": {
+        "name": "Loveland Frog",
+        "type": "terrestrial",
+        "other_names": "Loveland frogman, Loveland lizard",
+        "country": "United States",
+        "location": "Loveland, Ohio",
+        "description": "Amphibious humanoid creature reported in Loveland, Ohio. Described as a frog-like humanoid about 3-4 feet tall.",
+        "fact": "The Loveland Frog was first reported in 1950 by a police officer who saw a creature with a frog-like face and webbed hands. The creature was about 4 feet tall and had leathery, green skin. The creature was reported to be holding a spark plug and to have emitted a rubber-like odor. The incident became a local legend and the creature is now celebrated as the unofficial mascot of Loveland.",
+        "tips": "Look for a creature about 3-4 feet tall with frog-like features. The creature is said to have leathery, green skin, webbed hands, and a tendency to flee quickly. Look for sightings near the Great Miami River or in the downtown area of Loveland.",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Loveland_frog.png",
+        "source_url": "https://en.wikipedia.org/wiki/Loveland_Frog"
+      },
+      "wiki_record": {
+        "name": "Loveland Frog",
+        "type": "terrestrial",
+        "other_names": "Loveland frogman, Loveland lizard",
+        "country": "United States",
+        "location": "Loveland, Ohio , United States",
+        "description": "Humanoid frog",
+        "fact": "",
+        "tips": "",
+        "image_url": "",
+        "source_url": "https://en.wikipedia.org/wiki/Loveland_Frog",
+        "cultural_origin": "United States",
+        "first_recorded": "Unknown"
+      }
+    },
+    {
+      "name": "Mokele-mbembe",
+      "changes": {
+        "location": {
+          "from": "Congo River Basin",
+          "to": "Democratic Republic of the Congo"
+        },
+        "type": {
+          "from": "terrestrial",
+          "to": "aquatic"
+        }
+      },
+      "enrichments": {
+        "cultural_origin": {
+          "from": "",
+          "to": "Democratic Republic of the Congo"
+        },
+        "first_recorded": {
+          "from": "",
+          "to": "Unknown"
+        }
+      },
+      "seed_record": {
+        "name": "Mokele-mbembe",
+        "type": "terrestrial",
+        "other_names": "",
+        "country": "Democratic Republic of the Congo",
+        "location": "Congo River Basin",
+        "description": "Living sauropod dinosaur said to inhabit the Congo River basin. Described as a sauropod-like creature, possibly surviving non-avian dinosaurs.",
+        "fact": "Explorer Roy Mackal searched for Mokele-mbembe in the 1980s. Local tribes describe it as a large, gray, long-necked creature resembling a brontosaurus. The name means 'river-fish' in the Lingala language.",
+        "tips": "Look for a 20-30 foot long creature with a long neck, elephant-like body, and a small head. It supposedly appears only rarely after heavy rains when water levels are high.",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/00/Mokele-mbembe_ill_artlibre_jnl.png",
+        "source_url": "https://en.wikipedia.org/wiki/Mokele-mbembe"
+      },
+      "wiki_record": {
+        "name": "Mokele-mbembe",
+        "type": "aquatic",
+        "other_names": "",
+        "country": "Democratic Republic of the Congo",
+        "location": "Democratic Republic of the Congo",
+        "description": "Dinosaur (lake, river and/or swamp monster)",
+        "fact": "",
+        "tips": "",
+        "image_url": "",
+        "source_url": "https://en.wikipedia.org/wiki/Mokele-mbembe",
+        "cultural_origin": "Democratic Republic of the Congo",
+        "first_recorded": "Unknown"
+      }
+    },
+    {
+      "name": "Ogopogo",
+      "changes": {
+        "location": {
+          "from": "Okanagan Lake, British Columbia",
+          "to": "Okanagan Lake , British Columbia, Canada"
+        }
+      },
+      "enrichments": {
+        "cultural_origin": {
+          "from": "",
+          "to": "Canada"
+        },
+        "first_recorded": {
+          "from": "",
+          "to": "Unknown"
+        }
+      },
+      "seed_record": {
+        "name": "Ogopogo",
+        "type": "aquatic",
+        "other_names": "N'ha-a-it-k, Naitaka, Lake Okanagan Serpent",
+        "country": "Canada",
+        "location": "Okanagan Lake, British Columbia",
+        "description": "Lake monster in Okanagan Lake, British Columbia. The name comes from an 1899 song popularized by D'Arcy Jen Julian, though the legend predates the song.",
+        "fact": "Indigenous Secwepemc people have legends of N'ha-a-it-k, a lake serpent that has lived in Okanagan Lake for centuries. Described as a 20-30 foot long sea serpent with a horse-like head. The modern name 'Ogopogo' was popularized in the 20th century through media and tourism.",
+        "tips": "Look for a serpentine creature with humps breaking the surface, often seen near the lake's narrow southern end. The creature is said to make a hissing sound.",
+        "image_url": "",
+        "source_url": "https://en.wikipedia.org/wiki/Ogopogo"
+      },
+      "wiki_record": {
+        "name": "Ogopogo",
+        "type": "aquatic",
+        "other_names": "N'ha•a•itk, Naitaka",
+        "country": "Canada",
+        "location": "Okanagan Lake , British Columbia, Canada",
+        "description": "Lake monster",
+        "fact": "",
+        "tips": "",
+        "image_url": "",
+        "source_url": "https://en.wikipedia.org/wiki/Ogopogo",
+        "cultural_origin": "Canada",
+        "first_recorded": "Unknown"
+      }
+    },
+    {
+      "name": "Selma",
+      "changes": {
+        "location": {
+          "from": "Lake Seljord, Telemark, Norway",
+          "to": "Lake Seljord , Telemark, Norway"
+        }
+      },
+      "enrichments": {
+        "cultural_origin": {
+          "from": "",
+          "to": "Norway"
+        },
+        "first_recorded": {
+          "from": "",
+          "to": "Unknown"
+        }
+      },
+      "seed_record": {
+        "name": "Selma",
+        "type": "aquatic",
+        "other_names": "Seljordsormen, Lake Seljord Serpent",
+        "country": "Norway",
+        "location": "Lake Seljord, Telemark, Norway",
+        "description": "Lake monster said to inhabit Lake Seljord in Telemark, Norway. Described as a large, serpentine creature.",
+        "fact": "The Selma legend dates back to the 1800s. Locals have reported sightings of a large, serpentine creature in Lake Seljord. The creature is said to appear on calm nights, sometimes circling boats. The legend has been passed down through generations and has become a source of local pride.",
+        "tips": "Look for a creature about 15-20 feet long with a serpentine body. The creature is said to appear on calm nights and to circle boats. It is described as having a gray color and a tendency to avoid contact with humans.",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Seljord_komm.svg",
+        "source_url": "https://en.wikipedia.org/wiki/Selma_(lake_monster)"
+      },
+      "wiki_record": {
+        "name": "Selma",
+        "type": "aquatic",
+        "other_names": "Seljordsormen",
+        "country": "Norway",
+        "location": "Lake Seljord , Telemark, Norway",
+        "description": "Lake monster",
+        "fact": "",
+        "tips": "",
+        "image_url": "",
+        "source_url": "https://en.wikipedia.org/wiki/Selma_(lake_monster)",
+        "cultural_origin": "Norway",
+        "first_recorded": "Unknown"
+      }
+    },
+    {
+      "name": "Storsjö monster",
+      "changes": {
+        "source_url": {
+          "from": "https://en.wikipedia.org/wiki/Storsj%C3%B6odjuret",
+          "to": "https://en.wikipedia.org/wiki/Storsjöodjuret"
+        },
+        "location": {
+          "from": "Lake Storsjön, Jämtland, Sweden",
+          "to": "Lake Storsjön , Jämtland, Sweden"
+        }
+      },
+      "enrichments": {
+        "cultural_origin": {
+          "from": "",
+          "to": "Sweden"
+        },
+        "first_recorded": {
+          "from": "",
+          "to": "Unknown"
+        }
+      },
+      "seed_record": {
+        "name": "Storsjö monster",
+        "type": "aquatic",
+        "other_names": "Storsjöodjuret",
+        "country": "Sweden",
+        "location": "Lake Storsjön, Jämtland, Sweden",
+        "description": "Lake monster said to inhabit Lake Storsjön in Jämtland, Sweden. Described as a large, serpentine creature.",
+        "fact": "The Storsjö monster has been reported since the 1600s. Locals have reported sightings of a large, serpentine creature in Lake Storsjön. The creature is said to be about 25-30 feet long with a horse-like head. It is said to be protected by Swedish law, though only as a 'protected species' in name.",
+        "tips": "Look for a creature about 25-30 feet long with a horse-like head and a long neck. The creature is said to appear in the summer months and to be more active during calm weather. It is described as having a gray, serpentine body and small eyes.",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Draak_%C3%96stersund_22jul2006.jpg",
+        "source_url": "https://en.wikipedia.org/wiki/Storsj%C3%B6odjuret"
+      },
+      "wiki_record": {
+        "name": "Storsjö monster",
+        "type": "aquatic",
+        "other_names": "",
+        "country": "Sweden",
+        "location": "Lake Storsjön , Jämtland, Sweden",
+        "description": "Lake monster",
+        "fact": "",
+        "tips": "",
+        "image_url": "",
+        "source_url": "https://en.wikipedia.org/wiki/Storsjöodjuret",
+        "cultural_origin": "Sweden",
+        "first_recorded": "Unknown"
+      }
+    },
+    {
+      "name": "Chupacabra",
+      "changes": {
+        "description": {
+          "from": "Creature said to drain the blood (ectoplasm) of livestock, especially goats. Reports vary widely in description.",
+          "to": "Highly variable – typically falling into two categories: 1) bipedal humanoid with spiked spines (original description); 2) a quadrupedal canid [ 45 ]"
+        },
+        "location": {
+          "from": "Latin America, Southwestern United States",
+          "to": "Puerto Rico (originally), South and Central America, Southern North America"
+        },
+        "other_names": {
+          "from": "Goat-sucker, Chupacabras",
+          "to": "Chupacabras (Spanish for goat-sucker)"
+        }
+      },
+      "enrichments": {
+        "cultural_origin": {
+          "from": "",
+          "to": "Southern North America"
+        },
+        "first_recorded": {
+          "from": "",
+          "to": "Unknown"
+        }
+      },
+      "seed_record": {
+        "name": "Chupacabra",
+        "type": "terrestrial",
+        "other_names": "Goat-sucker, Chupacabras",
+        "country": "Puerto Rico, Mexico, United States",
+        "location": "Latin America, Southwestern United States",
+        "description": "Creature said to drain the blood (ectoplasm) of livestock, especially goats. Reports vary widely in description.",
+        "fact": "The first reported sighting was in March 1995 in Canovanas, Puerto Rico. The initial description was of a creature with spines like a kangaroo, large eyes, and sharp fangs. Later reports described a more canine creature, leading to confusion with misidentified coyotes suffering from mange.",
+        "tips": "Look for a creature with spines running down its back, large red eyes, and sharp fangs. The original description resembles a reptilian-humanoid cross. Many recent sightings are likely coyotes with mange.",
+        "image_url": "",
+        "source_url": "https://en.wikipedia.org/wiki/Chupacabra"
+      },
+      "wiki_record": {
+        "name": "Chupacabra",
+        "type": "terrestrial",
+        "other_names": "Chupacabras (Spanish for goat-sucker)",
+        "country": "Southern North America",
+        "location": "Puerto Rico (originally), South and Central America, Southern North America",
+        "description": "Highly variable – typically falling into two categories: 1) bipedal humanoid with spiked spines (original description); 2) a quadrupedal canid [ 45 ]",
+        "fact": "",
+        "tips": "",
+        "image_url": "",
+        "source_url": "https://en.wikipedia.org/wiki/Chupacabra",
+        "cultural_origin": "Southern North America",
+        "first_recorded": "Unknown"
+      }
+    },
+    {
+      "name": "Dover Demon",
+      "changes": {
+        "location": {
+          "from": "Dover, Massachusetts",
+          "to": "Dover, Massachusetts , United States"
+        }
+      },
+      "enrichments": {
+        "cultural_origin": {
+          "from": "",
+          "to": "United States"
+        },
+        "first_recorded": {
+          "from": "",
+          "to": "Unknown"
+        }
+      },
+      "seed_record": {
+        "name": "Dover Demon",
+        "type": "flying",
+        "other_names": "",
+        "country": "United States",
+        "location": "Dover, Massachusetts",
+        "description": "Cryptid reported in April 1977 in Dover, Massachusetts. Described as an approximately four-foot tall humanoid creature with glowing eyes.",
+        "fact": "On April 3, 1977, two teenagers reported seeing an otherworldly creature with large eyes, long fingers, and a hairless gray body. The creature was about 4 feet tall and had a large head and bulbous eyes that glowed. The incident became one of the most famous cryptid sightings in American history.",
+        "tips": "Look for a small humanoid creature about 4 feet tall with large glowing eyes, a large head, and long fingers. The creature is described as having gray, hairless skin and was reported to move in a strange, jerky manner.",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Dover_Demon.png",
+        "source_url": "https://en.wikipedia.org/wiki/Dover_Demon"
+      },
+      "wiki_record": {
+        "name": "Dover Demon",
+        "type": "terrestrial",
+        "other_names": "",
+        "country": "United States",
+        "location": "Dover, Massachusetts , United States",
+        "description": "Approximately four-foot tall humanoid creature with glowing eyes",
+        "fact": "",
+        "tips": "",
+        "image_url": "",
+        "source_url": "https://en.wikipedia.org/wiki/Dover_Demon",
+        "cultural_origin": "United States",
+        "first_recorded": "Unknown"
+      }
+    },
+    {
+      "name": "Fresno nightcrawler",
+      "changes": {
+        "location": {
+          "from": "Fresno, California",
+          "to": "Fresno, California , United States"
+        }
+      },
+      "enrichments": {
+        "cultural_origin": {
+          "from": "",
+          "to": "United States"
+        },
+        "first_recorded": {
+          "from": "",
+          "to": "Unknown"
+        }
+      },
+      "seed_record": {
+        "name": "Fresno Nightcrawler",
+        "type": "flying",
+        "other_names": "",
+        "country": "United States",
+        "location": "Fresno, California",
+        "description": "Cryptid reported in 2002. Described as resembling a pair of white pants with a small gray alien-like head positioned where the torso would be.",
+        "fact": "One of the most bizarre cryptid sightings on record. A surveillance camera caught footage of what appears to be two creatures moving in a hopping motion, resembling a pair of white pants with a small, gray, alien-like head. The creature is about 4-5 feet tall and has no arms or legs.",
+        "tips": "Look for a creature that looks like white pants with a small gray head. It moves by hopping and makes no sound. The creature is described as having large eyes and a small, featureless face.",
+        "image_url": "",
+        "source_url": "https://en.wikipedia.org/wiki/Fresno_nightcrawler"
+      },
+      "wiki_record": {
+        "name": "Fresno nightcrawler",
+        "type": "terrestrial",
+        "other_names": "",
+        "country": "United States",
+        "location": "Fresno, California , United States",
+        "description": "Resembling a pair of white trousers, this creature reportedly has long, white legs immediately topped by a rounded head. [ 48 ]",
+        "fact": "",
+        "tips": "",
+        "image_url": "",
+        "source_url": "https://en.wikipedia.org/wiki/Fresno_nightcrawler",
+        "cultural_origin": "United States",
+        "first_recorded": "Unknown"
+      }
+    },
+    {
+      "name": "Goatman",
+      "changes": {
+        "description": {
+          "from": "Humanoid creature with the body of a human and the head and legs of a goat. Reports vary by location.",
+          "to": "Humanoid creature with the torso and head of a man (with horns sprouting from the head) and the legs of a goat"
+        },
+        "location": {
+          "from": "Prince George's County, Maryland; Louisville, Kentucky; Lake Worth, Texas",
+          "to": "Prince George's County, Maryland ; Louisville, Kentucky ; Lake Worth, Texas"
+        },
+        "type": {
+          "from": "terrestrial",
+          "to": "aquatic"
+        }
+      },
+      "enrichments": {
+        "cultural_origin": {
+          "from": "",
+          "to": "Texas"
+        },
+        "first_recorded": {
+          "from": "",
+          "to": "Unknown"
+        }
+      },
+      "seed_record": {
+        "name": "Goatman",
+        "type": "terrestrial",
+        "other_names": "Pope Lick Monster, Lake Worth Monster, Satyr, Faun",
+        "country": "United States",
+        "location": "Prince George's County, Maryland; Louisville, Kentucky; Lake Worth, Texas",
+        "description": "Humanoid creature with the body of a human and the head and legs of a goat. Reports vary by location.",
+        "fact": "The Goatman legend began in the 1930s in Prince George's County, Maryland. The creature was described as a tall, humanoid creature with the head of a goat and the body of a man. In Louisville, Kentucky, the Pope Lick Trestle Goatman was said to lure victims onto train tracks. The creature has become a popular urban legend with various local variations.",
+        "tips": "Look for a creature about 7-8 feet tall with the body of a man and the head of a goat. The creature is said to have horns, hooves, and a goat-like beard. It is described as being strong and violent, and it is said to appear near train trestles and bridges.",
+        "image_url": "",
+        "source_url": "https://en.wikipedia.org/wiki/Goatman_(urban_legend)"
+      },
+      "wiki_record": {
+        "name": "Goatman",
+        "type": "aquatic",
+        "other_names": "Pope Lick Monster; Lake Worth monster; Satyr; Faun",
+        "country": "Texas",
+        "location": "Prince George's County, Maryland ; Louisville, Kentucky ; Lake Worth, Texas",
+        "description": "Humanoid creature with the torso and head of a man (with horns sprouting from the head) and the legs of a goat",
+        "fact": "",
+        "tips": "",
+        "image_url": "",
+        "source_url": "https://en.wikipedia.org/wiki/Goatman_(urban_legend)",
+        "cultural_origin": "Texas",
+        "first_recorded": "Unknown"
+      }
+    },
+    {
+      "name": "Lizard Man of Scape Ore Swamp",
+      "changes": {
+        "location": {
+          "from": "Lee County, South Carolina",
+          "to": "Lee County, South Carolina , United States"
+        }
+      },
+      "enrichments": {
+        "cultural_origin": {
+          "from": "",
+          "to": "United States"
+        },
+        "first_recorded": {
+          "from": "",
+          "to": "Unknown"
+        }
+      },
+      "seed_record": {
+        "name": "Lizard Man of Scape Ore Swamp",
+        "type": "terrestrial",
+        "other_names": "Lizard Man of Lee County",
+        "country": "United States",
+        "location": "Lee County, South Carolina",
+        "description": "Bipedal, humanoid reptilian creature reported in the swamps of South Carolina. Said to have a green, scaly body and a long tail.",
+        "fact": "The Lizard Man was first reported in 1988 in Bishopville, South Carolina. The creature was said to be 7-8 feet tall with a green, scaly body, a long tail, and red eyes. The sightings caused a sensation in the local media and the creature became a local celebrity.",
+        "tips": "Look for a creature about 7-8 feet tall with a green, scaly body and a long tail. The creature is said to be bipedal with a muscular build. It has red eyes and a tendency to stand upright.",
+        "image_url": "",
+        "source_url": "https://en.wikipedia.org/wiki/Lizard_Man_of_Scape_Ore_Swamp"
+      },
+      "wiki_record": {
+        "name": "Lizard Man of Scape Ore Swamp",
+        "type": "terrestrial",
+        "other_names": "Lizard Man of Lee County",
+        "country": "United States",
+        "location": "Lee County, South Carolina , United States",
+        "description": "Bipedal , humanoid reptilian creature",
+        "fact": "",
+        "tips": "",
+        "image_url": "",
+        "source_url": "https://en.wikipedia.org/wiki/Lizard_Man_of_Scape_Ore_Swamp",
+        "cultural_origin": "United States",
+        "first_recorded": "Unknown"
+      }
+    },
+    {
+      "name": "Michigan Dogman",
+      "changes": {
+        "location": {
+          "from": "Wexford County, Michigan",
+          "to": "Wexford County, Michigan , United States"
+        }
+      },
+      "enrichments": {
+        "cultural_origin": {
+          "from": "",
+          "to": "United States"
+        },
+        "first_recorded": {
+          "from": "",
+          "to": "Unknown"
+        }
+      },
+      "seed_record": {
+        "name": "Michigan Dogman",
+        "type": "terrestrial",
+        "other_names": "",
+        "country": "United States",
+        "location": "Wexford County, Michigan",
+        "description": "Creature said to have the body of a man and the head of a wolf or dog. Reported in rural Michigan since the 1800s.",
+        "fact": "The Michigan Dogman was first popularized in a song by Steve Cook in 1987. However, sightings date back to the 1800s. The creature is described as a half-man, half-wolf hybrid that lives in the forests of northern Michigan. The creature is said to have glowing yellow eyes and sharp teeth.",
+        "tips": "Look for a creature about 6 feet tall with the body of a man and the head of a wolf. The creature is said to have glowing yellow eyes and sharp teeth. It has a tendency to appear near logging camps and remote areas.",
+        "image_url": "",
+        "source_url": "https://en.wikipedia.org/wiki/Michigan_Dogman"
+      },
+      "wiki_record": {
+        "name": "Michigan Dogman",
+        "type": "terrestrial",
+        "other_names": "",
+        "country": "United States",
+        "location": "Wexford County, Michigan , United States",
+        "description": "Humanoid dog",
+        "fact": "",
+        "tips": "",
+        "image_url": "",
+        "source_url": "https://en.wikipedia.org/wiki/Michigan_Dogman",
+        "cultural_origin": "United States",
+        "first_recorded": "Unknown"
+      }
+    },
+    {
+      "name": "Mongolian death worm",
+      "changes": {
+        "country": {
+          "from": "Mongolia",
+          "to": "Gobi Desert (Asia)"
+        },
+        "location": {
+          "from": "Gobi Desert",
+          "to": "Gobi Desert (Asia)"
+        }
+      },
+      "enrichments": {
+        "cultural_origin": {
+          "from": "",
+          "to": "Gobi Desert (Asia)"
+        },
+        "first_recorded": {
+          "from": "",
+          "to": "Unknown"
+        }
+      },
+      "seed_record": {
+        "name": "Mongolian Death Worm",
+        "type": "terrestrial",
+        "other_names": "Allghoi khorkhoi, Allghoi khorkhoi",
+        "country": "Mongolia",
+        "location": "Gobi Desert",
+        "description": "Alleged giant worm or serpent in the Gobi Desert. Said to kill victims with electric shock or acidic bodily fluids.",
+        "fact": "Described as a bright red, sausage-like creature about 2-5 feet long. Locals claim it can kill animals with a single touch, either through electric discharge or by spraying a yellow, corrosive liquid. Some legends say it can kill camels instantly.",
+        "tips": "Look for a bright red, worm-like creature that moves in a wave-like motion. The creature is said to emerge after heavy rains, leaving a trail of dead vegetation behind.",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Allghoikhorkhoi.jpg",
+        "source_url": "https://en.wikipedia.org/wiki/Mongolian_death_worm"
+      },
+      "wiki_record": {
+        "name": "Mongolian death worm",
+        "type": "terrestrial",
+        "other_names": "Allghoi (or orghoi) khorkhoi",
+        "country": "Gobi Desert (Asia)",
+        "location": "Gobi Desert (Asia)",
+        "description": "Worm -like animal",
+        "fact": "",
+        "tips": "",
+        "image_url": "",
+        "source_url": "https://en.wikipedia.org/wiki/Mongolian_death_worm",
+        "cultural_origin": "Gobi Desert (Asia)",
+        "first_recorded": "Unknown"
+      }
+    },
+    {
+      "name": "Nandi bear",
+      "changes": {
+        "other_names": {
+          "from": "Chemosit, Kerit, Koddoelo",
+          "to": "Chemosit, Kerit, Koddoelo, Ngoelo, Ngoloko, Duba"
+        }
+      },
+      "enrichments": {
+        "cultural_origin": {
+          "from": "",
+          "to": "Eastern Africa"
+        },
+        "first_recorded": {
+          "from": "",
+          "to": "Unknown"
+        }
+      },
+      "seed_record": {
+        "name": "Nandi Bear",
+        "type": "terrestrial",
+        "other_names": "Chemosit, Kerit, Koddoelo",
+        "country": "Kenya, Uganda, Tanzania",
+        "location": "Eastern Africa",
+        "description": "Cryptid bear described as a large, powerfully built carnivore, resembling a bear with the head and trunk of an elephant. Said to inhabit the forests of East Africa.",
+        "fact": "The Nandi Bear, or 'Chemosit', is a creature from Kikuyu and Nandi folklore. It is described as a fearsome predator that attacks humans and livestock. Early 20th-century explorers reported finding large, unexplained footprints and hearing terrifying roars in the Aberdare Range. The creature is said to be nocturnal and extremely dangerous.",
+        "tips": "Look for a creature about the size of a large bear with a bear-like body and a trunk or pig-like snout. It is said to have a terrible odor and to attack without provocation. Footprints are said to be human-like but larger and with a strange shape.",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Nandi_bear_1961_%28cropped%29.png",
+        "source_url": "https://en.wikipedia.org/wiki/Nandi_bear"
+      },
+      "wiki_record": {
+        "name": "Nandi bear",
+        "type": "terrestrial",
+        "other_names": "Chemosit, Kerit, Koddoelo, Ngoelo, Ngoloko, Duba",
+        "country": "Eastern Africa",
+        "location": "Eastern Africa",
+        "description": "Large, powerfully built carnivore",
+        "fact": "",
+        "tips": "",
+        "image_url": "",
+        "source_url": "https://en.wikipedia.org/wiki/Nandi_bear",
+        "cultural_origin": "Eastern Africa",
+        "first_recorded": "Unknown"
+      }
+    },
+    {
+      "name": "Almas",
+      "changes": {
+        "country": {
+          "from": "Central Asia",
+          "to": "Asia/ Caucasus"
+        },
+        "other_names": {
+          "from": "Almasty, Abnauayu, Albay",
+          "to": "Abnauayu, almasty, albasty, bekk-bok, biabin-guli, golub-yavan, gul-biavan, auli-avan, kaptar, kra-dhun, ksy-giik, ksy-gyik, ochokochi, mirygdy, mulen, voita, wind-man, Zana"
+        }
+      },
+      "enrichments": {
+        "cultural_origin": {
+          "from": "",
+          "to": "Asia/ Caucasus"
+        },
+        "first_recorded": {
+          "from": "",
+          "to": "Unknown"
+        }
+      },
+      "seed_record": {
+        "name": "Almas",
+        "type": "terrestrial",
+        "other_names": "Almasty, Abnauayu, Albay",
+        "country": "Central Asia",
+        "location": "Caucasus Mountains, Central Asia",
+        "description": "Alleged relict hominid said to inhabit the mountainous regions of Central Asia, particularly the Caucasus. An ape-like creature with humanoid features.",
+        "fact": "The Almas is described as a tall, hairy, ape-like creature with human-like features. It has been reported by various names including 'almasty' and 'abnauayu'. Some researchers believe it may be a surviving population of Neanderthals or Denisovans. Reports come from Kazakhstan, Mongolia, and the Caucasus region.",
+        "tips": "Look for a creature described as having a human-like face, dark hair covering its body, and a height of 5-6 feet. It is said to be intelligent and capable of using tools. Footprints show a human-like shape.",
+        "image_url": "",
+        "source_url": "https://en.wikipedia.org/wiki/Almas_(cryptozoology)"
+      },
+      "wiki_record": {
+        "name": "Almas",
+        "type": "terrestrial",
+        "other_names": "Abnauayu, almasty, albasty, bekk-bok, biabin-guli, golub-yavan, gul-biavan, auli-avan, kaptar, kra-dhun, ksy-giik, ksy-gyik, ochokochi, mirygdy, mulen, voita, wind-man, Zana",
+        "country": "Asia/ Caucasus",
+        "location": "Asia/ Caucasus",
+        "description": "Non-human ape or hominid",
+        "fact": "",
+        "tips": "",
+        "image_url": "",
+        "source_url": "https://en.wikipedia.org/wiki/Almas_(cryptozoology)",
+        "cultural_origin": "Asia/ Caucasus",
+        "first_recorded": "Unknown"
+      }
+    },
+    {
+      "name": "Amomongo",
+      "changes": {
+        "location": {
+          "from": "Negros Occidental, Philippines",
+          "to": "Negros Occidental , Philippines"
+        }
+      },
+      "enrichments": {
+        "cultural_origin": {
+          "from": "",
+          "to": "Philippines"
+        },
+        "first_recorded": {
+          "from": "",
+          "to": "Unknown"
+        }
+      },
+      "seed_record": {
+        "name": "Amomongo",
+        "type": "terrestrial",
+        "other_names": "Orang Mawas, Impakta",
+        "country": "Philippines",
+        "location": "Negros Occidental, Philippines",
+        "description": "Ape-like creature said to inhabit the forests of Negros Occidental in the Philippines. Described as a large, black, ape-like creature with a long tail.",
+        "fact": "The Amomongo is a creature from Ilonggo mythology, described as a large, black, ape-like creature with a long tail. It is said to be about 8 feet tall and covered in black fur. The creature is said to be violent and dangerous, attacking humans who enter its territory.",
+        "tips": "Look for a creature about 8 feet tall, covered in black fur, with a long tail. The creature is said to have a terrible scream and to attack humans who enter its territory. It is described as having a human-like face but with large canine teeth.",
+        "image_url": "",
+        "source_url": "https://en.wikipedia.org/wiki/Amomongo"
+      },
+      "wiki_record": {
+        "name": "Amomongo",
+        "type": "terrestrial",
+        "other_names": "Orang Mawas, Impakta",
+        "country": "Philippines",
+        "location": "Negros Occidental , Philippines",
+        "description": "Ape or hominid",
+        "fact": "",
+        "tips": "",
+        "image_url": "",
+        "source_url": "https://en.wikipedia.org/wiki/Amomongo",
+        "cultural_origin": "Philippines",
+        "first_recorded": "Unknown"
+      }
+    },
+    {
+      "name": "Bigfoot",
+      "changes": {
+        "country": {
+          "from": "United States, Canada",
+          "to": "United States and Canada"
+        }
+      },
+      "enrichments": {
+        "cultural_origin": {
+          "from": "",
+          "to": "United States and Canada"
+        },
+        "first_recorded": {
+          "from": "",
+          "to": "Unknown"
+        }
+      },
+      "seed_record": {
+        "name": "Bigfoot",
+        "type": "terrestrial",
+        "other_names": "Sasquatch",
+        "country": "United States, Canada",
+        "location": "Pacific Northwest, North America",
+        "description": "Large, hairy, humanoid creature that is said to inhabit forests of the Pacific Northwest region of North America.",
+        "fact": "Modern Bigfoot lore began in 1958 when giant footprints were found in the Skookumchuck River area. The famous Patterson-Gimlin film from 1967 purports to show a Bigfoot walking along the mouth of Bluff Creek in Northern California.",
+        "tips": "Look for large footprints, 13-17 inches long, with a human-like shape but larger. The creature is described as 7-10 feet tall, covered in dark hair, and emitting a strong musky odor.",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Patterson_Gimlin_Bigfoot_%28cropped%29.jpg",
+        "source_url": "https://en.wikipedia.org/wiki/Bigfoot"
+      },
+      "wiki_record": {
+        "name": "Bigfoot",
+        "type": "terrestrial",
+        "other_names": "Sasquatch",
+        "country": "United States and Canada",
+        "location": "United States and Canada",
+        "description": "Large and hairy ape-like creature",
+        "fact": "",
+        "tips": "",
+        "image_url": "",
+        "source_url": "https://en.wikipedia.org/wiki/Bigfoot",
+        "cultural_origin": "United States and Canada",
+        "first_recorded": "Unknown"
+      }
+    },
+    {
+      "name": "Chatawa Monster",
+      "changes": {
+        "location": {
+          "from": "Pike County, Mississippi",
+          "to": "Pike County, Mississippi , United States"
+        }
+      },
+      "enrichments": {
+        "cultural_origin": {
+          "from": "",
+          "to": "United States"
+        },
+        "first_recorded": {
+          "from": "",
+          "to": "Unknown"
+        }
+      },
+      "seed_record": {
+        "name": "Chatawa Monster",
+        "type": "terrestrial",
+        "other_names": "",
+        "country": "United States",
+        "location": "Pike County, Mississippi",
+        "description": "Large ape-like creature reported in the woods near Chatawa, Mississippi. Described as a large, black, hairy creature with glowing red eyes.",
+        "fact": "The Chatawa Monster was first reported in 1962 by a group of hunters who saw a large, black creature with glowing red eyes in the swamps near Chatawa, Mississippi. The creature was said to have a terrible odor and to move silently through the forest. The incident became the subject of a local newspaper article and a cryptozoology investigation.",
+        "tips": "Look for a creature about 8 feet tall, covered in black hair, with glowing red eyes. The creature is said to have a terrible odor and to move silently through the forest. The creature is described as having a muscular, ape-like body.",
+        "image_url": "",
+        "source_url": "https://en.wikipedia.org/wiki/Chatawa,_Mississippi#Chatawa_Monster"
+      },
+      "wiki_record": {
+        "name": "Chatawa Monster",
+        "type": "terrestrial",
+        "other_names": "",
+        "country": "United States",
+        "location": "Pike County, Mississippi , United States",
+        "description": "Large ape-like creature",
+        "fact": "",
+        "tips": "",
+        "image_url": "",
+        "source_url": "https://en.wikipedia.org/wiki/Chatawa,_Mississippi#Chatawa_Monster",
+        "cultural_origin": "United States",
+        "first_recorded": "Unknown"
+      }
+    },
+    {
+      "name": "Fouke Monster",
+      "changes": {
+        "location": {
+          "from": "Arkansas",
+          "to": "Arkansas , United States"
+        }
+      },
+      "enrichments": {
+        "cultural_origin": {
+          "from": "",
+          "to": "United States"
+        },
+        "first_recorded": {
+          "from": "",
+          "to": "Unknown"
+        }
+      },
+      "seed_record": {
+        "name": "Fouke Monster",
+        "type": "terrestrial",
+        "other_names": "Jonesville Monster, Southern Sasquatch, Boggy Creek Monster",
+        "country": "United States",
+        "location": "Arkansas",
+        "description": "Hominid or other primate reported in the swamps of Arkansas. Said to be similar to Bigfoot. The subject of the 1972 film 'The Legend of Boggy Creek'.",
+        "fact": "The Fouke Monster was first reported in 1971 by a family in Fouke, Arkansas. The creature was described as a large, hairy, ape-like creature with a strong, unpleasant odor. The creature was said to have appeared in their backyard, and the family reported that it ran off into the nearby woods. The incident was featured in the 1972 documentary-style film 'The Legend of Boggy Creek'.",
+        "tips": "Look for a creature about 7-9 feet tall, covered in dark hair, with a strong, unpleasant odor. The creature is said to have a gorilla-like face and a tendency to knock over trees. It is described as being aggressive and territorial.",
+        "image_url": "",
+        "source_url": "https://en.wikipedia.org/wiki/Fouke_Monster"
+      },
+      "wiki_record": {
+        "name": "Fouke Monster",
+        "type": "terrestrial",
+        "other_names": "Jonesville Monster, Southern Sasquatch, Boggy Creek Monster",
+        "country": "United States",
+        "location": "Arkansas , United States",
+        "description": "Hominid or other primate",
+        "fact": "",
+        "tips": "",
+        "image_url": "",
+        "source_url": "https://en.wikipedia.org/wiki/Fouke_Monster",
+        "cultural_origin": "United States",
+        "first_recorded": "Unknown"
+      }
+    },
+    {
+      "name": "Orang Pendek",
+      "changes": {
+        "location": {
+          "from": "Sumatra, Indonesia",
+          "to": "Sumatra , Indonesia"
+        }
+      },
+      "enrichments": {
+        "cultural_origin": {
+          "from": "",
+          "to": "Indonesia"
+        },
+        "first_recorded": {
+          "from": "",
+          "to": "Unknown"
+        }
+      },
+      "seed_record": {
+        "name": "Orang Pendek",
+        "type": "terrestrial",
+        "other_names": "",
+        "country": "Indonesia",
+        "location": "Sumatra, Indonesia",
+        "description": "Alleged small, hairy, humanoid creature said to inhabit the forests of Sumatra, Indonesia. Described as a 'short man' in Indonesian.",
+        "fact": "The Orang Pendek is reportedly only 3-4 feet tall and has been reported by the Kubu people of Sumatra for centuries. It is described as having short legs, long arms, and a flat face. Some cryptozoologists believe it may be a surviving population of Homo erectus or Gigantopithecus.",
+        "tips": "Look for a creature about 3-4 feet tall with short brown fur, a flat face, and a tendency to run on all fours. The creature is said to be shy and avoid humans. Footprints show a human-like shape with a splayed big toe.",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Orang_Pendek.png",
+        "source_url": "https://en.wikipedia.org/wiki/Orang_Pendek"
+      },
+      "wiki_record": {
+        "name": "Orang Pendek",
+        "type": "terrestrial",
+        "other_names": "",
+        "country": "Indonesia",
+        "location": "Sumatra , Indonesia",
+        "description": "Small hominid",
+        "fact": "",
+        "tips": "",
+        "image_url": "",
+        "source_url": "https://en.wikipedia.org/wiki/Orang_Pendek",
+        "cultural_origin": "Indonesia",
+        "first_recorded": "Unknown"
+      }
+    },
+    {
+      "name": "Skunk ape",
+      "changes": {
+        "location": {
+          "from": "Florida",
+          "to": "Florida , United States"
+        },
+        "other_names": {
+          "from": "Stink Ape, Myakka Ape, Swamp Ape",
+          "to": "Stink Ape, Myakka Ape, Myakka Skunk Ape"
+        }
+      },
+      "enrichments": {
+        "cultural_origin": {
+          "from": "",
+          "to": "United States"
+        },
+        "first_recorded": {
+          "from": "",
+          "to": "Unknown"
+        }
+      },
+      "seed_record": {
+        "name": "Skunk Ape",
+        "type": "terrestrial",
+        "other_names": "Stink Ape, Myakka Ape, Swamp Ape",
+        "country": "United States",
+        "location": "Florida",
+        "description": "Hair-covered, ape-like creature said to occupy parts of the rural areas and wetlands of Florida. Said to emit a strong, skunk-like odor.",
+        "fact": "Unlike Bigfoot, the Skunk Ape is adapted to swamp environments and has a strong, unpleasant odor. Most reported sightings are in Florida's Okefenokee Swamp and Everglades. The creature is described as having a strong, musky odor of a skunk's scent.",
+        "tips": "Look for a 5-7 foot tall, hairy, ape-like creature with a strong skunk-like odor. It has a protruding jaw and is said to be more aggressive than Bigfoot. Sightings often occur near water sources.",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/ac/The_Florida_Skunk_Ape_-_panoramio.jpg",
+        "source_url": "https://en.wikipedia.org/wiki/Skunk_ape"
+      },
+      "wiki_record": {
+        "name": "Skunk ape",
+        "type": "terrestrial",
+        "other_names": "Stink Ape, Myakka Ape, Myakka Skunk Ape",
+        "country": "United States",
+        "location": "Florida , United States",
+        "description": "Primate",
+        "fact": "",
+        "tips": "",
+        "image_url": "",
+        "source_url": "https://en.wikipedia.org/wiki/Skunk_ape",
+        "cultural_origin": "United States",
+        "first_recorded": "Unknown"
+      }
+    },
+    {
+      "name": "Yeren",
+      "changes": {
+        "other_names": {
+          "from": "Yeh Ren, Chinese Wildman",
+          "to": "Yiren, Yeh Ren, Chinese Wildman [ citation needed ]"
+        }
+      },
+      "enrichments": {
+        "cultural_origin": {
+          "from": "",
+          "to": "China"
+        },
+        "first_recorded": {
+          "from": "",
+          "to": "Unknown"
+        }
+      },
+      "seed_record": {
+        "name": "Yeren",
+        "type": "terrestrial",
+        "other_names": "Yeh Ren, Chinese Wildman",
+        "country": "China",
+        "location": "Hunan, Hubei, Henan provinces, China",
+        "description": "Chinese variant of Bigfoot. Described as a large, hairy, ape-like creature with human-like intelligence. Reports date back over 2,000 years.",
+        "fact": "The Yeren has been part of Chinese folklore for over 2,000 years, mentioned in texts from the Warring States period. The creature is said to have supernatural abilities, including the power to vanish and become invisible. It is described as a mix of human and ape with red hair and a strong, unpleasant odor. Modern sightings peaked in the 1970s-80s.",
+        "tips": "Look for a creature with reddish-brown hair covering its body, a human-like face, and glowing eyes. It is said to walk upright but can also move on all fours. The creature reportedly has supernatural abilities and is rarely seen by hunters.",
+        "image_url": "",
+        "source_url": "https://en.wikipedia.org/wiki/Yeren"
+      },
+      "wiki_record": {
+        "name": "Yeren",
+        "type": "terrestrial",
+        "other_names": "Yiren, Yeh Ren, Chinese Wildman [ citation needed ]",
+        "country": "China",
+        "location": "China",
+        "description": "Primate (possible hominin )",
+        "fact": "",
+        "tips": "",
+        "image_url": "",
+        "source_url": "https://en.wikipedia.org/wiki/Yeren",
+        "cultural_origin": "China",
+        "first_recorded": "Unknown"
+      }
+    },
+    {
+      "name": "Jersey Devil",
+      "changes": {
+        "country": {
+          "from": "United States",
+          "to": "as well as other parts of"
+        },
+        "location": {
+          "from": "Pine Barrens, New Jersey",
+          "to": "United States, mainly the South Jersey Pine Barrens , as well as other parts of"
+        }
+      },
+      "enrichments": {
+        "cultural_origin": {
+          "from": "",
+          "to": "as well as other parts of"
+        },
+        "first_recorded": {
+          "from": "",
+          "to": "Unknown"
+        }
+      },
+      "seed_record": {
+        "name": "Jersey Devil",
+        "type": "flying",
+        "other_names": "Leeds Devil, Jersey Devil",
+        "country": "United States",
+        "location": "Pine Barrens, New Jersey",
+        "description": "Creature purported to inhabit the Pine Barrens of New Jersey. Legend says it was born in 1735 as the 13th child of Mother Leeds.",
+        "fact": "According to legend, Mother Leeds cursed her 13th child, who was born with the legs of a horse, the wings of a bat, and the head of a goat. The creature allegedly escaped from the Leeds homestead and took refuge in the Pine Barrens. Over 1,000 sightings have been reported.",
+        "tips": "Look for a kangaroo-like creature about 3-4 feet tall with the head of a goat, horse-like body, and bat-like wings. It is said to emit a high-pitched scream and leave a strong, unpleasant odor.",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/13/Jersey_Devil_Philadelphia_Post_1909.jpg",
+        "source_url": "https://en.wikipedia.org/wiki/Jersey_Devil"
+      },
+      "wiki_record": {
+        "name": "Jersey Devil",
+        "type": "flying",
+        "other_names": "Leeds Devil",
+        "country": "as well as other parts of",
+        "location": "United States, mainly the South Jersey Pine Barrens , as well as other parts of ",
+        "description": "Winged, bipedal horse",
+        "fact": "",
+        "tips": "",
+        "image_url": "",
+        "source_url": "https://en.wikipedia.org/wiki/Jersey_Devil",
+        "cultural_origin": "as well as other parts of",
+        "first_recorded": "Unknown"
+      }
+    },
+    {
+      "name": "Kongamato",
+      "changes": {
+        "country": {
+          "from": "Zambia, Angola, Democratic Republic of the Congo",
+          "to": "Zambia; Angola ; The Democratic Republic of the Congo"
+        },
+        "location": {
+          "from": "Mwinilunga, Zambia; Angola",
+          "to": "Mwinilunga , Zambia; Angola ; The Democratic Republic of the Congo"
+        }
+      },
+      "enrichments": {
+        "cultural_origin": {
+          "from": "",
+          "to": "Zambia; Angola ; The Democratic Republic of the Congo"
+        },
+        "first_recorded": {
+          "from": "",
+          "to": "Unknown"
+        }
+      },
+      "seed_record": {
+        "name": "Kongamato",
+        "type": "flying",
+        "other_names": "",
+        "country": "Zambia, Angola, Democratic Republic of the Congo",
+        "location": "Mwinilunga, Zambia; Angola",
+        "description": "Living pterosaur said to inhabit the Mwinilunga swamps near the border of Zambia and Angola. Described as a flying reptile resembling a pterodactyl.",
+        "fact": "The Kongamato was first reported by explorer Frank Melland in 1911. Villagers described a creature with leathery wings and a beak, similar to a pterosaur. Some researchers believe it could be a surviving species of pterosaur, though the scientific community dismisses this as impossible due to the creature's extinction 66 million years ago.",
+        "tips": "Look for a flying reptile about 3-4 feet long with leathery wings, a long beak, and a crest on its head. The creature is said to be aggressive and can kill small livestock. It has a strong, fishy odor.",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Kongamato.png",
+        "source_url": "https://en.wikipedia.org/wiki/Kongamato"
+      },
+      "wiki_record": {
+        "name": "Kongamato",
+        "type": "terrestrial",
+        "other_names": "",
+        "country": "Zambia; Angola ; The Democratic Republic of the Congo",
+        "location": "Mwinilunga , Zambia; Angola ; The Democratic Republic of the Congo",
+        "description": "Living species of pterosaur",
+        "fact": "",
+        "tips": "",
+        "image_url": "",
+        "source_url": "https://en.wikipedia.org/wiki/Kongamato",
+        "cultural_origin": "Zambia; Angola ; The Democratic Republic of the Congo",
+        "first_recorded": "Unknown"
+      }
+    },
+    {
+      "name": "Mothman",
+      "changes": {
+        "location": {
+          "from": "Point Pleasant, West Virginia",
+          "to": "Mason County, West Virginia , United States"
+        }
+      },
+      "enrichments": {
+        "cultural_origin": {
+          "from": "",
+          "to": "United States"
+        },
+        "first_recorded": {
+          "from": "",
+          "to": "Unknown"
+        }
+      },
+      "seed_record": {
+        "name": "Mothman",
+        "type": "flying",
+        "other_names": "",
+        "country": "United States",
+        "location": "Point Pleasant, West Virginia",
+        "description": "Supernatural being reported in the Point Pleasant area of West Virginia from November 1966 to December 1967. Described as a large humanoid with moth-like wings and glowing red eyes.",
+        "fact": "The Mothman first appeared in November 1966 when two couriers reported seeing a winged humanoid with red eyes. The sightings continued for over a year, typically occurring at night. The creature was often seen near the TNT factory area and was considered an omen of disaster. The Silver Bridge collapse on December 15, 1967 killed 46 people.",
+        "tips": "Look for a 6-7 foot tall humanoid with large moth-like wings and glowing red eyes. The creature was often seen in pairs and was considered an omen of impending death. Most sightings occurred between 10 PM and 4 AM.",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Mothman_Artist%27s_Impression.png",
+        "source_url": "https://en.wikipedia.org/wiki/Mothman"
+      },
+      "wiki_record": {
+        "name": "Mothman",
+        "type": "flying",
+        "other_names": "",
+        "country": "United States",
+        "location": "Mason County, West Virginia , United States",
+        "description": "Winged bipedal",
+        "fact": "",
+        "tips": "",
+        "image_url": "",
+        "source_url": "https://en.wikipedia.org/wiki/Mothman",
+        "cultural_origin": "United States",
+        "first_recorded": "Unknown"
+      }
+    }
+  ],
+  "enriched": [
+    {
+      "name": "Bunyip",
+      "changes": {},
+      "enrichments": {
+        "cultural_origin": {
+          "from": "",
+          "to": "Australia"
+        },
+        "first_recorded": {
+          "from": "",
+          "to": "Unknown"
+        }
+      },
+      "seed_record": {
+        "name": "Bunyip",
+        "type": "aquatic",
+        "other_names": "Bahnyip",
+        "country": "Australia",
+        "location": "Victoria, New South Wales, Queensland, South Australia",
+        "description": "Creature from Aboriginal mythology that inhabits swamps, billabongs, and waterholes. Descriptions vary widely from a dog-like seal to a feathered horse to a humanoid figure.",
+        "fact": "The bunyip is a pan-Aboriginal figure that has evolved in description over time. Early European settlers described it as a giant starfish found in swamps. Modern descriptions range from a seal-like creature to a part-alligator, part-marsupial beast.",
+        "tips": "Look for a creature said to inhabit swamps and waterholes. Descriptions range from 6-12 feet in length with a dog-like head and seal-like body. Warning calls are said to sound like a baby crying.",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Bunyip_1890.jpg",
+        "source_url": "https://en.wikipedia.org/wiki/Bunyip"
+      },
+      "wiki_record": {
+        "name": "Bunyip",
+        "type": "aquatic",
+        "other_names": "Bahnyip",
+        "country": "Australia",
+        "location": "Australia",
+        "description": "Amphibious creature",
+        "fact": "",
+        "tips": "",
+        "image_url": "",
+        "source_url": "https://en.wikipedia.org/wiki/Bunyip",
+        "cultural_origin": "Australia",
+        "first_recorded": "Unknown"
+      }
+    },
+    {
+      "name": "Champ",
+      "changes": {},
+      "enrichments": {
+        "cultural_origin": {
+          "from": "",
+          "to": "North America"
+        },
+        "first_recorded": {
+          "from": "",
+          "to": "Unknown"
+        }
+      },
+      "seed_record": {
+        "name": "Champ",
+        "type": "aquatic",
+        "other_names": "Champy, Champ-Dundreay",
+        "country": "United States",
+        "location": "Lake Champlain, New York/Vermont",
+        "description": "Lake monster reported in Lake Champlain, which runs between New York State and Vermont, near the borders of Canada.",
+        "fact": "Champ is North America's second most famous lake monster after Nessie. Reports date back to 1609 when French explorer Samuel de Champlain noted sightings. The creature is described as having a serpentine body, humps, and a turtle-like head.",
+        "tips": "Look for a 15-30 foot serpentine creature with a horse-like head and turtle-like head. Most sightings occur in the northern part of the lake near the Canadian border.",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Artistic_representation_of_Sandra_Mansi%27s_1977_photograph_of_%22Champ%22_lake_monster.jpg",
+        "source_url": "https://en.wikipedia.org/wiki/Champ_(folklore)"
+      },
+      "wiki_record": {
+        "name": "Champ",
+        "type": "aquatic",
+        "other_names": "Champy",
+        "country": "North America",
+        "location": "Lake Champlain , North America",
+        "description": "Lake monster",
+        "fact": "",
+        "tips": "",
+        "image_url": "",
+        "source_url": "https://en.wikipedia.org/wiki/Champ_(folklore)",
+        "cultural_origin": "North America",
+        "first_recorded": "Unknown"
+      }
+    },
+    {
+      "name": "Chuchunya",
+      "changes": {},
+      "enrichments": {
+        "cultural_origin": {
+          "from": "",
+          "to": "Russia"
+        },
+        "first_recorded": {
+          "from": "",
+          "to": "Unknown"
+        }
+      },
+      "seed_record": {
+        "name": "Chuchunya",
+        "type": "terrestrial",
+        "other_names": "",
+        "country": "Russia",
+        "location": "Altai Mountains, Siberia",
+        "description": "Cryptid reported in the Altai Mountains of Siberia. Described as a large, humanoid creature with long arms and a gorilla-like face.",
+        "fact": "The Chuchunya was first reported in the early 20th century by Russian explorers. The creature was described as a large, humanoid creature with long arms and a gorilla-like face. Some researchers believe it may be a surviving population of the Denisovan hominin, a human ancestor that lived in Siberia around 40,000 years ago.",
+        "tips": "Look for a creature about 7-8 feet tall with a gorilla-like face and long arms. The creature is said to have a strong, unpleasant odor and to move silently through the forest. It is described as being highly intelligent and capable of using tools.",
+        "image_url": "",
+        "source_url": "https://en.wikipedia.org/wiki/Chuchunya"
+      },
+      "wiki_record": {
+        "name": "Chuchunya",
+        "type": "terrestrial",
+        "other_names": "",
+        "country": "Russia",
+        "location": "Russia",
+        "description": "Large hominid",
+        "fact": "",
+        "tips": "",
+        "image_url": "",
+        "source_url": "https://en.wikipedia.org/wiki/Chuchunya",
+        "cultural_origin": "Russia",
+        "first_recorded": "Unknown"
+      }
+    },
+    {
+      "name": "Honey Island Swamp monster",
+      "changes": {},
+      "enrichments": {
+        "cultural_origin": {
+          "from": "",
+          "to": "United States"
+        },
+        "first_recorded": {
+          "from": "",
+          "to": "Unknown"
+        }
+      },
+      "seed_record": {
+        "name": "Honey Island Swamp Monster",
+        "type": "terrestrial",
+        "other_names": "Letiche, Tainted Keitre",
+        "country": "United States",
+        "location": "Honey Island Swamp, Louisiana",
+        "description": "Hominid or other primate reported in the Honey Island Swamp of Louisiana. A creature of local folklore, said to resemble a cross between a baboon and a human.",
+        "fact": "The Honey Island Swamp Monster was first reported in 1960 by a group of fishermen who saw a large, hairy creature in the swamp. The creature was described as being about 7-8 feet tall with a baboon-like face. The swamp is said to be home to many strange creatures, including alligators and snakes. The creature is said to be aggressive and territorial.",
+        "tips": "Look for a creature about 7-8 feet tall with a baboon-like face and a strong, unpleasant odor. The creature is said to have a gorilla-like body with a baboon-like face and long arms. It is described as being aggressive and territorial.",
+        "image_url": "",
+        "source_url": "https://en.wikipedia.org/wiki/Honey_Island_Swamp_monster"
+      },
+      "wiki_record": {
+        "name": "Honey Island Swamp monster",
+        "type": "terrestrial",
+        "other_names": "Letiche, Tainted Keitre",
+        "country": "United States",
+        "location": "Louisiana , United States",
+        "description": "Hominid or other primate",
+        "fact": "",
+        "tips": "",
+        "image_url": "",
+        "source_url": "https://en.wikipedia.org/wiki/Honey_Island_Swamp_monster",
+        "cultural_origin": "United States",
+        "first_recorded": "Unknown"
+      }
+    },
+    {
+      "name": "Mapinguari",
+      "changes": {},
+      "enrichments": {
+        "cultural_origin": {
+          "from": "",
+          "to": "Brazil"
+        },
+        "first_recorded": {
+          "from": "",
+          "to": "Unknown"
+        }
+      },
+      "seed_record": {
+        "name": "Mapinguari",
+        "type": "terrestrial",
+        "other_names": "Mapinguary",
+        "country": "Brazil",
+        "location": "Amazon rainforest, Brazil",
+        "description": "Cryptid reported in the Amazon rainforest of Brazil. Described as a giant, sloth-like creature with a mouth on its abdomen. Some legends describe it as a cursed human transformed into a beast.",
+        "fact": "The Mapinguari is a creature from Amazonian folklore, described as a giant, sloth-like creature with a mouth on its abdomen. It is said to be the last of the giant ground sloths, which went extinct 10,000 years ago. The creature's terrifying scream is said to be so loud that it can kill a person.",
+        "tips": "Look for a creature the size of a large bear, with shaggy fur and a mouth on its abdomen. The creature is said to have a terrible scream that can kill a person. It is described as slow-moving but extremely dangerous.",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/27/MAPINGUARI_%28cropped%29.png",
+        "source_url": "https://en.wikipedia.org/wiki/Mapinguari"
+      },
+      "wiki_record": {
+        "name": "Mapinguari",
+        "type": "terrestrial",
+        "other_names": "Mapinguary",
+        "country": "Brazil",
+        "location": "Brazil",
+        "description": "Man-eating hominid with a mouth on its abdomen; sometimes thought to be a ground sloth",
+        "fact": "",
+        "tips": "",
+        "image_url": "",
+        "source_url": "https://en.wikipedia.org/wiki/Mapinguari",
+        "cultural_origin": "Brazil",
+        "first_recorded": "Unknown"
+      }
+    },
+    {
+      "name": "Nittaewo",
+      "changes": {},
+      "enrichments": {
+        "cultural_origin": {
+          "from": "",
+          "to": "Sri Lanka"
+        },
+        "first_recorded": {
+          "from": "",
+          "to": "Unknown"
+        }
+      },
+      "seed_record": {
+        "name": "Nittaewo",
+        "type": "terrestrial",
+        "other_names": "Nittevo",
+        "country": "Sri Lanka",
+        "location": "Sri Lanka (formerly Ceylon)",
+        "description": "Small hominid said to inhabit the forests of Sri Lanka. Described as a small, hairy, human-like creature that walks on all fours.",
+        "fact": "The Nittaewo is a creature from Sinhalese folklore, described as a small, hairy, human-like creature that walks on all fours. Some researchers believe it may be a surviving population of Homo floriensis, a small hominid species discovered in Indonesia. The creature is said to be shy and avoid humans.",
+        "tips": "Look for a creature about 3-4 feet tall, covered in dark hair, with a hairless face. The creature is said to walk on all fours but can also stand upright. It has a tendency to mimic human speech and to hide when threatened.",
+        "image_url": "",
+        "source_url": "https://en.wikipedia.org/wiki/Nittaewo"
+      },
+      "wiki_record": {
+        "name": "Nittaewo",
+        "type": "terrestrial",
+        "other_names": "Nittevo",
+        "country": "Sri Lanka",
+        "location": "Sri Lanka",
+        "description": "Small hominid",
+        "fact": "",
+        "tips": "",
+        "image_url": "",
+        "source_url": "https://en.wikipedia.org/wiki/Nittaewo",
+        "cultural_origin": "Sri Lanka",
+        "first_recorded": "Unknown"
+      }
+    },
+    {
+      "name": "Yeti",
+      "changes": {},
+      "enrichments": {
+        "cultural_origin": {
+          "from": "",
+          "to": "Himalayas (Asia)"
+        },
+        "first_recorded": {
+          "from": "",
+          "to": "Unknown"
+        }
+      },
+      "seed_record": {
+        "name": "Yeti",
+        "type": "terrestrial",
+        "other_names": "Abominable Snowman, Meh-Teh",
+        "country": "Tibet, Nepal, Bhutan",
+        "location": "Himalayan region",
+        "description": "Large, yeti footprint, hairy creature said to inhabit the Himalayan region, including Mount Everest. An ape-like creature that walks upright.",
+        "fact": "The Yeti has been part of Himalayan folklore for centuries. The name 'Abominable Snowman' was coined by 19th-century explorers. Footprints up to 16 inches long have been found at altitudes of 20,000+ feet.",
+        "tips": "Look for large footprints in snow or mud, 12-18 inches long with a humanoid shape. The creature is said to have a strong, unpleasant odor and emits a foul smell before appearing.",
+        "image_url": "",
+        "source_url": "https://en.wikipedia.org/wiki/Yeti"
+      },
+      "wiki_record": {
+        "name": "Yeti",
+        "type": "terrestrial",
+        "other_names": "Abominable Snowman",
+        "country": "Himalayas (Asia)",
+        "location": "Himalayas (Asia)",
+        "description": "Large and hairy human-like entity, various other descriptions",
+        "fact": "",
+        "tips": "",
+        "image_url": "",
+        "source_url": "https://en.wikipedia.org/wiki/Yeti",
+        "cultural_origin": "Himalayas (Asia)",
+        "first_recorded": "Unknown"
+      }
+    },
+    {
+      "name": "Yowie",
+      "changes": {},
+      "enrichments": {
+        "cultural_origin": {
+          "from": "",
+          "to": "Australia"
+        },
+        "first_recorded": {
+          "from": "",
+          "to": "Unknown"
+        }
+      },
+      "seed_record": {
+        "name": "Yowie",
+        "type": "terrestrial",
+        "other_names": "Yowaho, Sasquatch of the South",
+        "country": "Australia",
+        "location": "Eastern Australia, Queensland",
+        "description": "Australian version of Bigfoot. A large, hairy, humanoid creature said to inhabit the forests and mountains of Australia.",
+        "fact": "Aboriginal Australians have Dreamtime stories of hairy 'yowies' that predate European settlement. Reports include large footprints, terrifying howls, and red-eyed shadow figures. The creature is said to be 8-12 feet tall.",
+        "tips": "Look for large human-like footprints in muddy areas, strong odors of rotting vegetation, and unexplained sounds in the wilderness. Most sightings occur in remote forested areas of southeast Queensland.",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Yowie-statue-Kilcoy-Queensland.JPG",
+        "source_url": "https://en.wikipedia.org/wiki/Yowie"
+      },
+      "wiki_record": {
+        "name": "Yowie",
+        "type": "terrestrial",
+        "other_names": "",
+        "country": "Australia",
+        "location": "Australia",
+        "description": "Large and hairy human-like entity, various other descriptions",
+        "fact": "",
+        "tips": "",
+        "image_url": "",
+        "source_url": "https://en.wikipedia.org/wiki/Yowie",
+        "cultural_origin": "Australia",
+        "first_recorded": "Unknown"
+      }
+    },
+    {
+      "name": "Flatwoods monster",
+      "changes": {},
+      "enrichments": {
+        "cultural_origin": {
+          "from": "",
+          "to": "West Virginia"
+        },
+        "first_recorded": {
+          "from": "",
+          "to": "Unknown"
+        }
+      },
+      "seed_record": {
+        "name": "Flatwoods Monster",
+        "type": "flying",
+        "other_names": "Braxie, Braxton County Monster, Phantom of Flatwoods",
+        "country": "United States",
+        "location": "Flatwoods, West Virginia",
+        "description": "Cryptid reported in 1952. Described as a large, winged creature with a spade-shaped head. The Mothman is often associated with the area.",
+        "fact": "On September 15, 1952, two young men and a woman reported seeing a red, glowing, spade-headed being near Flatwoods, West Virginia. The creature was about 8-10 feet tall and had a bird-like head and a spade-shaped face. It glided rather than walked and emitted a buzzing sound.",
+        "tips": "Look for a creature with a spade-shaped head, large eyes, and bat-like wings. It is said to have a metallic smell and emits a buzzing or humming sound. The creature was reported to be about 8-10 feet tall with a wingspan of 10-12 feet.",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Flatwoods_monster.png",
+        "source_url": "https://en.wikipedia.org/wiki/Flatwoods_monster"
+      },
+      "wiki_record": {
+        "name": "Flatwoods monster",
+        "type": "terrestrial",
+        "other_names": "Braxie, Braxton County Monster, Phantom of Flatwoods",
+        "country": "West Virginia",
+        "location": "Flatwoods, West Virginia",
+        "description": "A floating creature with a head that looks like a spade [ 83 ]",
+        "fact": "",
+        "tips": "",
+        "image_url": "",
+        "source_url": "https://en.wikipedia.org/wiki/Flatwoods_monster",
+        "cultural_origin": "West Virginia",
+        "first_recorded": "Unknown"
+      }
+    }
+  ],
+  "unchanged": [],
+  "summary": {
+    "total_found": 53,
+    "new_count": 15,
+    "updated_count": 29,
+    "enriched_count": 9,
+    "unchanged_count": 0,
+    "seed_total": 48
+  }
+}

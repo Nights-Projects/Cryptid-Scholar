@@ -346,6 +346,37 @@ function getActiveCryptids() {
     });
 }
 
+function updateData() {
+    const btn = document.getElementById('updateBtn');
+    if (!btn) return;
+    
+    btn.disabled = true;
+    btn.classList.add('updating');
+    btn.textContent = '🔄 Updating...';
+    
+    fetch(API_BASE + '/api/update', { method: 'POST' })
+        .then(resp => resp.json())
+        .then(data => {
+            if (data.success) {
+                alert('✅ Cryptid data updated successfully!\n\n' +
+                      'New cryptids added + existing data refreshed.\n' +
+                      'The app will reload now.');
+                window.location.reload();
+            } else {
+                alert('❌ Update failed: ' + (data.error || 'Unknown error'));
+                btn.disabled = false;
+                btn.classList.remove('updating');
+                btn.textContent = '🔄 Update Cryptid Data';
+            }
+        })
+        .catch(err => {
+            alert('❌ Network error: ' + err.message);
+            btn.disabled = false;
+            btn.classList.remove('updating');
+            btn.textContent = '🔄 Update Cryptid Data';
+        });
+}
+
 function init() {
     loadProgress();
     renderBrowse();

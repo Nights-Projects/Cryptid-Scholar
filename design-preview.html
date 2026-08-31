@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Cryptid Scholar - Design Preview</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #0a001a;
+    --card: #140028;
+    --card-2: #1a002f;
+    --border: #331a4d;
+    --text: #e8e8f0;
+    --muted: #8888aa;
+    --dim: #5a5a72;
+    --aquatic: #3498db;
+    --terrestrial: #e74c3c;
+    --flying: #9b59b6;
+    --accent: #f1c40f;
+  }
+  body { 
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    min-height: 100vh;
+    padding: 16px;
+    max-width: 375px;
+    margin: 0 auto;
+  }
+  /* Top bar with title */
+  .header {
+    text-align: center;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 16px;
+  }
+  .header h1 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--accent);
+  }
+  .header .subtitle {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 4px;
+  }
+  
+  /* Search bar */
+  .search-bar {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 12px;
+    margin-bottom: 16px;
+    font-size: 14px;
+    color: var(--text);
+  }
+  .search-bar::placeholder { color: var(--dim); }
+  
+  /* Filter chips */
+  .filters { display: flex; gap: 8px; margin-bottom: 16px; overflow-x: auto; padding-bottom: 4px; }
+  .filter-chip {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 6px 14px;
+    font-size: 12px;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  .filter-chip.active { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+  
+  /* Cryptid grid */
+  .cryptid-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .cryptid-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 12px;
+    text-align: center;
+  }
+  .cryptid-thumb {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 8px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+  }
+  .thumb-aquatic { background: rgba(52,152,219,0.15); border: 2px solid var(--aquatic); }
+  .thumb-terrestrial { background: rgba(231,76,60,0.15); border: 2px solid var(--terrestrial); }
+  .thumb-flying { background: rgba(155,89,182,0.15); border: 2px solid var(--flying); }
+  .cryptid-name {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  .cryptid-badge {
+    display: inline-block;
+    font-size: 10px;
+    padding: 2px 8px;
+    border-radius: 10px;
+    text-transform: uppercase;
+  }
+  .badge-aquatic { background: rgba(52,152,219,0.2); color: var(--aquatic); }
+  .badge-terrestrial { background: rgba(231,76,60,0.2); color: var(--terrestrial); }
+  .badge-flying { background: rgba(155,89,182,0.2); color: var(--flying); }
+  
+  /* Nav tabs */
+  .nav-tabs {
+    display: flex;
+    justify-content: space-around;
+    background: var(--card);
+    border-radius: 12px;
+    padding: 8px;
+    margin-bottom: 16px;
+  }
+  .nav-tab {
+    flex: 1;
+    text-align: center;
+    padding: 8px;
+    font-size: 13px;
+    color: var(--muted);
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  .nav-tab.active {
+    background: var(--accent);
+    color: var(--bg);
+    font-weight: 600;
+  }
+</style>
+</head>
+<body>
+  <!-- Top bar -->
+  <div class="header">
+    <h1>🦉 Cryptid Scholar</h1>
+    <div class="subtitle">48 cryptids · 3 types</div>
+  </div>
+  
+  <!-- Nav tabs -->
+  <div class="nav-tabs">
+    <div class="nav-tab active">Browse</div>
+    <div class="nav-tab">Flashcards</div>
+    <div class="nav-tab">Quiz</div>
+    <div class="nav-tab">Stats</div>
+  </div>
+  
+  <!-- Search -->
+  <input class="search-bar" type="text" placeholder="Search cryptids…" value="">
+  
+  <!-- Filters -->
+  <div class="filters">
+    <div class="filter-chip active">All</div>
+    <div class="filter-chip">Aquatic</div>
+    <div class="filter-chip">Terrestrial</div>
+    <div class="filter-chip">Flying</div>
+  </div>
+  
+  <!-- Cryptid grid -->
+  <div class="cryptid-grid">
+    <!-- Card 1 -->
+    <div class="cryptid-card">
+      <div class="cryptid-thumb thumb-aquatic">🌊</div>
+      <div class="cryptid-name">Loch Ness Monster</div>
+      <span class="cryptid-badge badge-aquatic">Aquatic</span>
+    </div>
+    <!-- Card 2 -->
+    <div class="cryptid-card">
+      <div class="cryptid-thumb thumb-terrestrial">🏔️</div>
+      <div class="cryptid-name">Bigfoot</div>
+      <span class="cryptid-badge badge-terrestrial">Terrestrial</span>
+    </div>
+    <!-- Card 3 -->
+    <div class="cryptid-card">
+      <div class="cryptid-thumb thumb-flying">🦇</div>
+      <div class="cryptid-name">Jersey Devil</div>
+      <span class="cryptid-badge badge-flying">Flying</span>
+    </div>
+    <!-- Card 4 -->
+    <div class="cryptid-card">
+      <div class="cryptid-thumb thumb-aquatic">🌊</div>
+      <div class="cryptid-name">Bunyip</div>
+      <span class="cryptid-badge badge-aquatic">Aquatic</span>
+    </div>
+  </div>
+</body>
+</html>

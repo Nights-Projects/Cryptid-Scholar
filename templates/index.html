@@ -280,6 +280,35 @@
   .stat-item.s3 .stat-value { color: var(--flying); }
   .stat-item.s4 .stat-value { color: var(--gold); }
 
+  /* Update button */
+  .update-btn-container {
+    margin: 12px 0;
+    text-align: center;
+  }
+  .update-btn {
+    background: var(--card);
+    border: 1px solid var(--border);
+    color: var(--muted);
+    border-radius: 12px;
+    padding: 8px 16px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+    width: 100%;
+  }
+  .update-btn:hover {
+    background: var(--gold);
+    color: var(--bg);
+    border-color: var(--gold);
+  }
+  .update-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  .update-btn.updating {
+    color: var(--gold);
+  }
+
   /* Empty state */
   .empty-state {
     text-align: center; padding: 40px 20px; color: var(--dim);
@@ -315,6 +344,9 @@
       <div class="nav-tab" data-tab="flashcard">Flashcards</div>
       <div class="nav-tab" data-tab="quiz">Quiz</div>
       <div class="nav-tab" data-tab="stats">Stats</div>
+    </div>
+    <div class="update-btn-container">
+      <button class="update-btn" id="updateBtn" onclick="updateData()">🔄 Update Cryptid Data</button>
     </div>
     <div class="search-bar">
       <input type="text" id="searchInput" placeholder="Search cryptids..." autocomplete="off">

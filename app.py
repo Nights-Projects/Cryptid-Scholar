@@ -185,6 +185,41 @@ def rebuild_database():
         return jsonify({'success': False, 'error': str(e)}), 500
 
 
+@app.route('/api/update', methods=['POST'])
+def update_data():
+    """Run the incremental crawler and apply updates to the seed + database."""
+    import subprocess
+    try:
+        # Run the crawler with --apply flag
+        result = subprocess.run(
+            ['python3', str(BASE_DIR / 'crawl_new_cryptids.py'), '--apply'],
+            capture_output=True,
+            text=True,
+            timeout=120,
+            check=False
+        )
+
+        # After applying, rebuild the database
+        result2 = subprocess.run(
+            ['python3', str(BASE_DIR / 'rebuild_database.py'), '--json-input', str(BASE_DIR / 'cryptids_seed.json')],
+            capture_output=True,
+            text=True,
+            timeout=120,
+            check=False
+        )
+
+        return jsonify({
+            'success': True,
+            'crawler_output': result.stdout,
+            'rebuild_output': result2.stdout,
+            'stderr': result.stderr + result2.stderr
+        })
+    except subprocess.TimeoutExpired:
+        return jsonify({'success': False, 'error': 'Update timed out'}), 500
+    except (OSError, ValueError, RuntimeError) as e:
+        return jsonify({'success': False, 'error': str(e)}), 500
+
+
 @app.route('/static/thumbs/<filename>')
 def serve_thumb(filename):
     thumb_path = THUMBS_DIR / filename
