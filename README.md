@@ -4,6 +4,8 @@ Mobile-first PWA for learning about cryptids from around the world — 48+ creat
 
 A spiritual cousin to [Breed Scholar](https://github.com/NicSparks/breed-scholar), but built for the cryptozoology community instead of dog breeds.
 
+**Repository:** [Nights-Projects/project-1](https://github.com/Nights-Projects/project-1) (working name — will rename when Night approves a final title)
+
 ## Quick Start
 
 ```bash
@@ -28,6 +30,7 @@ Web UI: `http://localhost:8000`
 - 💳 **Flashcards** — 3D flip cards with cryptid images and facts
 - 🧠 **Quiz mode** — test your cryptid knowledge with multiple-choice questions
 - 📊 **Stats** — track your learning progress with local storage
+- 🔄 **Incremental updates** — pull new cryptids from Wikipedia without manual DB rebuilds
 
 ## Cryptid Types
 
@@ -39,11 +42,12 @@ Web UI: `http://localhost:8000`
 
 ## Database
 
-The SQLite database (`cryptid_scholar.db`) contains 48 cryptids sourced from Wikipedia's "List of cryptids" and related articles. Each cryptid has:
+The SQLite database (`cryptid_scholar.db`) is built from `cryptids_seed.json` — a curated dataset sourced from Wikipedia's "List of cryptids" and related articles. Each cryptid has:
 
 - Name, type, description, fact, identification tips
 - Location and country of origin
 - Other aliases/names
+- Cultural origin and first recorded sighting
 - Wikimedia Commons image URL
 
 ## Rebuilding the Database
@@ -57,6 +61,15 @@ docker compose exec web python download_images.py
 
 # Generate placeholder thumbnails
 docker compose exec web python generate_placeholders.py
+
+# Check for new cryptids from Wikipedia (preview only)
+docker compose exec web python crawl_new_cryptids.py --dry-run
+
+# Apply new cryptids to seed data
+docker compose exec web python crawl_new_cryptids.py --apply
+
+# Rebuild database after updates
+docker compose exec web python rebuild_database.py --json-input cryptids_seed.json
 ```
 
 ## Volumes & Backup
@@ -68,8 +81,9 @@ docker compose exec web python generate_placeholders.py
 ## CI/CD
 
 - Docker image is built automatically in GitHub Actions on merge to `main`
-- Image is pushed to GitHub Packages: `ghcr.io/NicSparks/cryptid-scholar`
+- Image is pushed to GitHub Packages: `ghcr.io/Nights-Projects/project-1`
 - Multi-arch builds: `linux/amd64, linux/arm64`
+- Branch protection on `main` requires: PR with 1 approval + security scan + lint + tests passing
 
 ## License
 

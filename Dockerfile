@@ -5,7 +5,7 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY app.py rebuild_database.py download_images.py generate_placeholders.py generate_icons.py ./
+COPY app.py rebuild_database.py download_images.py generate_placeholders.py generate_icons.py crawl_new_cryptids.py ./
 COPY templates/ ./templates/
 COPY static/ ./static/
 COPY cryptids_seed.json ./

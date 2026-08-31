@@ -46,7 +46,7 @@ jobs:
           pip install ruff mypy
 
       - name: Lint Python with Ruff
-        run: ruff check app.py rebuild_database.py download_images.py generate_placeholders.py generate_icons.py
+        run: ruff check app.py rebuild_database.py download_images.py generate_placeholders.py generate_icons.py crawl_new_cryptids.py
 
       - name: Validate HTML structure
         run: |
