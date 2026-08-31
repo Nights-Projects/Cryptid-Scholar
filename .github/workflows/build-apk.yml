@@ -32,7 +32,7 @@ jobs:
             ~/.gradle/caches
             ~/.gradle/wrapper
             ~/.android/build-cache
-          key: ${{ runner.os }}-gradle-${{ hashFiles('android/app/build.gradle', 'android/gradle.properties') }}
+          key: ${{ runner.os }}-gradle-${{ hashFiles('android/**/*.gradle.kts') }}
           restore-keys: |
             ${{ runner.os }}-gradle-
 
@@ -40,7 +40,6 @@ jobs:
         run: |
           curl -sL https://services.gradle.org/distributions/gradle-8.12.1-bin.zip -o /tmp/gradle.zip
           python3 -c "import zipfile, sys; zipfile.ZipFile(sys.argv[1]).extractall(sys.argv[2])" /tmp/gradle.zip /tmp
-          # Fix permission via base permissions, not chmod (chmod might be blocked by sandbox)
           chmod 755 /tmp/gradle-8.12.1/bin/gradle
 
       - name: Build with Gradle (no wrapper)
