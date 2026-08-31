@@ -74,7 +74,8 @@ jobs:
           python rebuild_database.py --json-input cryptids_seed.json
 
       - name: Run tests
-        run: python test_cryptid_api.py
+        run: |
+          python test_cryptid_api.py
 
   build-and-push:
     name: Build and Push Docker Image
