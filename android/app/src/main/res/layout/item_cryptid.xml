@@ -10,24 +10,44 @@
         android:id="@+id/cryptidName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="Cryptid Name"
         android:textColor="#F1C40F"
         android:textSize="18sp"
         android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/cryptidType"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="#625FA6"
-        android:textSize="14sp"
-        android:layout_marginTop="4dp" />
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:id="@+id/cryptidType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🦖 Terrestrial"
+            android:textColor="#625FA6"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/cryptidCountry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" • United States"
+            android:textColor="#625FA6"
+            android:textSize="14sp"
+            android:layout_marginStart="8dp" />
+
+    </LinearLayout>
 
     <TextView
-        android:id="@+id/cryptidCountry"
-        android:layout_width="wrap_content"
+        android:id="@+id/cryptidDescription"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="#625FA6"
-        android:textSize="14sp"
-        android:layout_marginTop="2dp" />
+        android:textColor="#E8E8F0"
+        android:textSize="12sp"
+        android:layout_marginTop="8dp"
+        android:maxLines="3"
+        android:ellipsize="end" />
 
 </LinearLayout>

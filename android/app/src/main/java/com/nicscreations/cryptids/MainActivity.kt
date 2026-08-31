@@ -8,7 +8,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -24,8 +23,8 @@ data class ApiStats(
     val aquatic: Int,
     val terrestrial: Int,
     val flying: Int,
-    val countries: List<CountryCount>?,
-    val types: List<TypeCount>?
+    val countries: List<CountryCount>? = null,
+    val types: List<TypeCount>? = null
 )
 
 data class CountryCount(val country: String, val cnt: Int)
@@ -36,14 +35,14 @@ data class Cryptid(
     val id: Int,
     val name: String,
     val type: String,
-    val country: String?,
-    val location: String?,
-    val other_names: String?,
-    val description: String?,
-    val fact: String?,
-    val tips: String?,
-    val image_url: String?,
-    val source_url: String?
+    val country: String? = null,
+    val location: String? = null,
+    val other_names: String? = null,
+    val description: String? = null,
+    val fact: String? = null,
+    val tips: String? = null,
+    val image_url: String? = null,
+    val source_url: String? = null
 )
 
 // --- API Service ---
@@ -96,11 +95,23 @@ class CryptidViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     private val nameText: TextView = view.findViewById(R.id.cryptidName)
     private val typeText: TextView = view.findViewById(R.id.cryptidType)
     private val countryText: TextView = view.findViewById(R.id.cryptidCountry)
+    private val descriptionText: TextView = view.findViewById(R.id.cryptidDescription)
 
     fun bind(cryptid: Cryptid) {
         nameText.text = cryptid.name
-        typeText.text = cryptid.type
-        countryText.text = cryptid.country ?: "Unknown"
+        
+        // Determine habitat icon based on type
+        val icon = when (cryptid.type.lowercase()) {
+            "aquatic" -> "🌊"
+            "flying" -> "🦇"
+            "terrestrial" -> "🦖"
+            else -> "🦕"
+        }
+        typeText.text = "$icon ${cryptid.type}"
+        
+        countryText.text = cryptid.country?.let { " • $it" } ?: ""
+        
+        descriptionText.text = cryptid.description ?: cryptid.fact ?: cryptid.tips ?: ""
     }
 }
 
