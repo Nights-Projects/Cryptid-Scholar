@@ -7,6 +7,7 @@ Built as a Flask blueprint to be registered in the main app.
 
 import os
 import sqlite3
+import logging
 from pathlib import Path
 
 from flask import (
@@ -28,6 +29,9 @@ ADMIN_SECRET = os.environ.get('SECRET_KEY', 'default-dev-key')
 
 DB_PATH = os.environ.get('DATABASE_URL', '/data/cryptid_scholar.db')
 BASE_DIR = Path(__file__).resolve().parent
+
+# Set up logging
+logger = logging.getLogger(__name__)
 
 # Simple HTML template for the admin panel
 ADMIN_TEMPLATE = '''
@@ -180,13 +184,15 @@ def action_rebuild():
             ['python3', str(BASE_DIR / 'rebuild_database.py'), '--json-input', str(BASE_DIR / 'cryptids_seed.json')],
             capture_output=True, text=True, timeout=300, check=False
         )
+        logger.info(f"Rebuild successful: {result.returncode}")
         return jsonify({
             'success': True,
             'output': result.stdout,
-            'stderr': result.stderr
+            'errors': result.stderr
         })
-    except Exception as e:
-        return jsonify({'success': False, 'error': str(e)}), 500
+    except Exception:
+        logger.exception("Rebuild failed")
+        return jsonify({'success': False, 'error': 'Rebuild failed'}), 500
 
 
 @admin_bp.route('/actions/update', methods=['POST'])
@@ -206,11 +212,12 @@ def action_update():
             ['python3', str(BASE_DIR / 'rebuild_database.py'), '--json-input', str(BASE_DIR / 'cryptids_seed.json')],
             capture_output=True, text=True, timeout=120, check=False
         )
+        logger.info(f"Update successful: crawer={result.returncode}, rebuild={result2.returncode}")
         return jsonify({
             'success': True,
             'crawler_output': result.stdout,
             'rebuild_output': result2.stdout,
-            'stderr': result.stderr + result2.stderr
         })
-    except Exception as e:
-        return jsonify({'success': False, 'error': str(e)}), 500
+    except Exception:
+        logger.exception("Update failed")
+        return jsonify({'success': False, 'error': 'Update failed'}), 500

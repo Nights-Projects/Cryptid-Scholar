@@ -34,17 +34,23 @@ HEADERS = {
 
 
 def fetch_page(url, retries=3):
+    """Fetch page content with retry logic.
+    
+    Returns the page content as text on success, or None on failure.
+    """
+    last_error = None
     for attempt in range(retries):
         try:
             resp = requests.get(url, headers=HEADERS, timeout=30)
             resp.raise_for_status()
             return resp.text
         except requests.RequestException as e:
+            last_error = e
             if attempt < retries - 1:
                 time.sleep(2 ** attempt)
-            else:
-                print(f"  [!] Failed to fetch {url}: {e}")
-                return None
+    # All retries exhausted
+    print(f"  [!] Failed to fetch {url} after {retries} attempts: {last_error}")
+    return None
 
 
 def get_wikimedia_image_url(creature_name):

@@ -7,9 +7,10 @@ Serves JSON API (port 9004) + authenticated Admin UI (port 9005)
 
 import os
 import sqlite3
-from pathlib import Path
+from pathlib import Path, PurePosixPath
+from urllib.parse import unquote
 
-from flask import Flask, jsonify, request, send_file
+from flask import Flask, jsonify, request, send_file, abort
 
 from admin_interface import admin_bp
 
@@ -38,6 +39,18 @@ def get_db():
     conn = sqlite3.connect(str(DB_PATH))
     conn.row_factory = sqlite3.Row
     return conn
+
+
+def safe_filename(filename: str) -> str:
+    """Sanitize filename to prevent path traversal attacks."""
+    # Decode URL-encoded chars, then take only the basename
+    decoded = unquote(filename)
+    # Use PurePosixPath to handle forward slashes, then take name only
+    safe = PurePosixPath(decoded).name
+    # Reject if the original contained path separators after decoding
+    if not safe or safe != decoded.split('/')[-1].split('\\')[-1]:
+        abort(400)
+    return safe
 
 
 @app.route('/api/cryptids/all')
@@ -176,13 +189,13 @@ def rebuild_database():
         )
         return jsonify({
             'success': True,
-            'stdout': result.stdout,
-            'stderr': result.stderr
+            'output': result.stdout,
+            'errors': result.stderr
         })
     except subprocess.TimeoutExpired:
         return jsonify({'success': False, 'error': 'Rebuild timed out'}), 500
-    except (OSError, ValueError, RuntimeError) as e:
-        return jsonify({'success': False, 'error': str(e)}), 500
+    except (OSError, ValueError, RuntimeError):
+        return jsonify({'success': False, 'error': 'Rebuild failed'}), 500
 
 
 @app.route('/api/update', methods=['POST'])
@@ -212,17 +225,17 @@ def update_data():
             'success': True,
             'crawler_output': result.stdout,
             'rebuild_output': result2.stdout,
-            'stderr': result.stderr + result2.stderr
         })
     except subprocess.TimeoutExpired:
         return jsonify({'success': False, 'error': 'Update timed out'}), 500
-    except (OSError, ValueError, RuntimeError) as e:
-        return jsonify({'success': False, 'error': str(e)}), 500
+    except (OSError, ValueError, RuntimeError):
+        return jsonify({'success': False, 'error': 'Update failed'}), 500
 
 
 @app.route('/static/thumbs/<filename>')
-def serve_thumb(filename):
-    thumb_path = THUMBS_DIR / filename
+def serve_thumb(filename: str):
+    safe_name = safe_filename(filename)
+    thumb_path = THUMBS_DIR / safe_name
     if thumb_path.exists():
         return send_file(str(thumb_path), mimetype='image/jpeg')
     placeholder = BASE_DIR / 'static' / 'placeholder.jpg'
@@ -232,8 +245,9 @@ def serve_thumb(filename):
 
 
 @app.route('/static/full/<filename>')
-def serve_full(filename):
-    full_path = FULL_DIR / filename
+def serve_full(filename: str):
+    safe_name = safe_filename(filename)
+    full_path = FULL_DIR / safe_name
     if full_path.exists():
         return send_file(str(full_path))
     return jsonify({'error': 'Image not cached'}), 404

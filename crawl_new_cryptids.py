@@ -61,19 +61,20 @@ KNOWN_FLYING = ["jersey devil", "mothman", "roc", "thunderbird", "bat",
 
 def fetch_wiki_page(url: str, retries: int = 3) -> str | None:
     """Fetch Wikipedia page HTML with retry logic."""
+    last_error = None
     for attempt in range(retries):
         try:
             resp = requests.get(url, headers=HEADERS, timeout=30)
             resp.raise_for_status()
             return resp.text
         except requests.RequestException as e:
+            last_error = e
             if attempt < retries - 1:
                 wait = 2 ** attempt
                 print(f"[!] Attempt {attempt + 1} failed: {e} — retrying in {wait}s")
                 time.sleep(wait)
-            else:
-                print(f"[!] All retries failed for {url}: {e}")
-                return None
+    # All retries exhausted - return None after the loop
+    print(f"[!] All retries failed for {url}: {last_error}")
     return None
 
 
@@ -238,8 +239,7 @@ def build_name_index(seed_data: list[dict]) -> dict:
 
 
 def compute_diff(wiki_cryptids: list[dict], seed_data: list[dict]) -> dict:
-    """
-    Compare crawled Wikipedia data against existing seed.
+    """Compare crawled Wikipedia data against existing seed.
 
     Returns:
       {
@@ -279,22 +279,17 @@ def compute_diff(wiki_cryptids: list[dict], seed_data: list[dict]) -> dict:
                 enrichments[field] = {"from": seed_val, "to": wiki_val}
 
             # Update: both have different non-empty values
-            # Only update if Wikipedia's value is meaningfully better:
-            #  - For text fields (description, country, location, other_names): prefer longer
-            #  - For image_url: prefer non-empty over empty
-            #  - For source_url: always use the URL (it's just the Wikipedia link)
             if seed_val and wiki_val and seed_val != wiki_val:
                 should_update = False
 
                 if field == "image_url":
-                    # Prefer Wikipedia image if seed has no image
-                    if not seed_val and wiki_val:
-                        should_update = True
+                    # Always update image_url if different
+                    should_update = True
                 elif field == "source_url":
-                    # Always update source_url (it's just the link, always valid)
+                    # Always update source_url
                     should_update = True
                 elif field == "type":
-                    # Use Wikipedia's type if it's more specific (not default 'terrestrial')
+                    # Use Wikipedia's type if it's more specific
                     if wiki_val != "terrestrial" and seed_val == "terrestrial":
                         should_update = True
                     elif wiki_val == "terrestrial" and seed_val != "terrestrial":
