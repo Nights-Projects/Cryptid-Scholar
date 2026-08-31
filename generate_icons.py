@@ -4,7 +4,7 @@ from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFont
 
-BASE_DIR = Path('/root/cryptid-scholar/static')
+BASE_DIR = Path(__file__).resolve().parent / 'static'
 BASE_DIR.mkdir(parents=True, exist_ok=True)
 
 

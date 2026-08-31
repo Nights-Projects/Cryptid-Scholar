@@ -7,7 +7,7 @@ from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFont
 
-BASE_DIR = Path('/root/cryptid-scholar')
+BASE_DIR = Path(__file__).resolve().parent
 THUMBS_DIR = BASE_DIR / 'static' / 'thumbs'
 FULL_DIR = BASE_DIR / 'static' / 'full'
 DB_PATH = BASE_DIR / 'cryptid_scholar.db'

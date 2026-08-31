@@ -4,7 +4,6 @@ Cryptid Scholar - Mobile-first PWA for learning about cryptids from around the w
 Adapted from Breed Scholar for the cryptozoology community.
 """
 
-import json
 import os
 import sqlite3
 from pathlib import Path

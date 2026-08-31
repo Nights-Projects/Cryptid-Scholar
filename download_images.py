@@ -6,7 +6,6 @@ Generates 200x200 thumbnails in static/thumbs/ and full-size in static/full/.
 
 import argparse
 import json
-import re
 import sqlite3
 import time
 from io import BytesIO
@@ -24,7 +23,7 @@ except ImportError:
     except AttributeError:
         LANCZOS = 3
 
-BASE_DIR = Path('/root/cryptid-scholar')
+BASE_DIR = Path(__file__).resolve().parent
 DB_PATH = BASE_DIR / 'cryptid_scholar.db'
 THUMBS_DIR = BASE_DIR / 'static' / 'thumbs'
 FULL_DIR = BASE_DIR / 'static' / 'full'
