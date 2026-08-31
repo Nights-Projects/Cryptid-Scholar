@@ -61,19 +61,20 @@ KNOWN_FLYING = ["jersey devil", "mothman", "roc", "thunderbird", "bat",
 
 def fetch_wiki_page(url: str, retries: int = 3) -> str | None:
     """Fetch Wikipedia page HTML with retry logic."""
+    last_error = None
     for attempt in range(retries):
         try:
             resp = requests.get(url, headers=HEADERS, timeout=30)
             resp.raise_for_status()
             return resp.text
         except requests.RequestException as e:
+            last_error = e
             if attempt < retries - 1:
                 wait = 2 ** attempt
                 print(f"[!] Attempt {attempt + 1} failed: {e} — retrying in {wait}s")
                 time.sleep(wait)
-            else:
-                print(f"[!] All retries failed for {url}: {e}")
-                return None
+    # All retries exhausted
+    print(f"[!] All retries failed for {url}: {last_error}")
     return None
 
 
@@ -97,7 +98,7 @@ def is_real_cryptid(name: str) -> bool:
         "cryptid whales", "sea serpents", "phantom kangaroo", "giant (afghanistan)",
         "megalodon (surviving", "moa (surviving", "thylacine (surviving",
         "homo floresiensis (surviving", "manatee (surviving", "marsupial lion (surviving",
-        "passenger pigeon (surviving", "wisent (surviving", "aurochs (surviving",
+        "passenger pigeon (surviving", "wisent (surviving", "auroch (surviving",
         "cave lion (surviving", "sabretooth (surviving", "mammoth (surviving",
         "irish elk (surviving", "woolly rhinoceros (surviving", "steppe bison (surviving",
     ]
@@ -238,8 +239,7 @@ def build_name_index(seed_data: list[dict]) -> dict:
 
 
 def compute_diff(wiki_cryptids: list[dict], seed_data: list[dict]) -> dict:
-    """
-    Compare crawled Wikipedia data against existing seed.
+    """Compare crawled Wikipedia data against existing seed.
 
     Returns:
       {
@@ -287,11 +287,10 @@ def compute_diff(wiki_cryptids: list[dict], seed_data: list[dict]) -> dict:
                 should_update = False
 
                 if field == "image_url":
-                    # Prefer Wikipedia image if seed has no image
-                    if not seed_val and wiki_val:
-                        should_update = True
+                    # Always update image_url if different
+                    should_update = True
                 elif field == "source_url":
-                    # Always update source_url (it's just the link, always valid)
+                    # Always update source_url (it's just the Wikipedia link)
                     should_update = True
                 elif field == "type":
                     # Use Wikipedia's type if it's more specific (not default 'terrestrial')
