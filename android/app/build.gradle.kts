@@ -50,7 +50,8 @@ tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach 
 }
 
 tasks.withType<JavaCompile>().configureEach {
-    options.compatibilityOptions.encoding = "UTF-8"
+    options.encoding = "UTF-8"
+    options.compilerArgs.addAll(listOf("-source", "17", "-target", "17"))
 }
 
 dependencies {
