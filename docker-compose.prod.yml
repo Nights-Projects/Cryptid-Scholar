@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  cryptid-scholar:
+    image: ghcr.io/wickedyoda/cryptid-scholar:latest
+    ports:
+      - "8001:5000"
+    volumes:
+      - ./data:/data
+    environment:
+      - DATABASE_URL=/data/cryptid_scholar.db
+      - STATIC_DIR=/data/static
+      - THUMBS_DIR=/data/static/thumbs
+      - FULL_DIR=/data/static/full
+    restart: unless-stopped

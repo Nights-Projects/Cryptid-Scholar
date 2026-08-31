@@ -6,6 +6,7 @@ Generates 200x200 thumbnails in static/thumbs/ and full-size in static/full/.
 
 import argparse
 import json
+import os
 import sqlite3
 import time
 from io import BytesIO
@@ -24,9 +25,9 @@ except ImportError:
         LANCZOS = 3
 
 BASE_DIR = Path(__file__).resolve().parent
-DB_PATH = BASE_DIR / 'cryptid_scholar.db'
-THUMBS_DIR = BASE_DIR / 'static' / 'thumbs'
-FULL_DIR = BASE_DIR / 'static' / 'full'
+DB_PATH = Path(os.environ.get('DATABASE_URL', str(BASE_DIR / 'cryptid_scholar.db')))
+THUMBS_DIR = Path(os.environ.get('THUMBS_DIR', str(BASE_DIR / 'static' / 'thumbs')))
+FULL_DIR = Path(os.environ.get('FULL_DIR', str(BASE_DIR / 'static' / 'full')))
 HEADERS = {
     'User-Agent': 'Mozilla/5.0 (compatible; CryptidScholar/1.0; +https://github.com/NicSparks/cryptid-scholar)'
 }

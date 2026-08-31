@@ -1,11 +1,13 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python3  # noqa: EXE001
 """Generate iOS/PWA app icons for Cryptid Scholar."""
+import os
 from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFont
 
-BASE_DIR = Path(__file__).resolve().parent / 'static'
-BASE_DIR.mkdir(parents=True, exist_ok=True)
+BASE_DIR = Path(__file__).resolve().parent
+STATIC_DIR = Path(os.environ.get('STATIC_DIR', str(BASE_DIR / 'static')))
+STATIC_DIR.mkdir(parents=True, exist_ok=True)
 
 
 def create_icon(size, path):
@@ -61,10 +63,10 @@ def create_icon(size, path):
 
 
 def main():
-    create_icon(192, BASE_DIR / 'icon-192.png')
-    create_icon(512, BASE_DIR / 'icon-512.png')
-    create_icon(32, BASE_DIR / 'favicon.ico')
-    print(f"\n[✓] Icons created in {BASE_DIR}")
+    create_icon(192, STATIC_DIR / 'icon-192.png')
+    create_icon(512, STATIC_DIR / 'icon-512.png')
+    create_icon(32, STATIC_DIR / 'favicon.ico')
+    print(f"\n[✓] Icons created in {STATIC_DIR}")
 
 
 if __name__ == '__main__':

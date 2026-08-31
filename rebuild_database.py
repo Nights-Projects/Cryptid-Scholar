@@ -6,11 +6,12 @@ Usage: python rebuild_database.py [--json-input cryptids_seed.json] [--skip-craw
 
 import argparse
 import json
+import os
 import sqlite3
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent
-DB_PATH = BASE_DIR / 'cryptid_scholar.db'
+DB_PATH = Path(os.environ.get('DATABASE_URL', str(BASE_DIR / 'cryptid_scholar.db')))
 
 # Cryptid registry codes — cryptids don't have official registries,
 # but we categorize by geographic/source origin
