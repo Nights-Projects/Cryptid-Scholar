@@ -7,6 +7,10 @@ import sys
 import traceback
 from pathlib import Path
 
+# Ensure we can find the project root
+PROJECT_ROOT = Path(__file__).resolve().parent
+sys.path.insert(0, str(PROJECT_ROOT))
+
 
 def test_database():
     """Check that the database exists and has data."""
@@ -70,6 +74,8 @@ def test_flask_app():
 
 if __name__ == '__main__':
     print("Starting tests...")
+    print(f"Working directory: {Path.cwd()}")
+    print(f"Python path: {sys.path[:5]}")
     tests = [
         test_database,
         test_seed_json,

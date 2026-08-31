@@ -76,7 +76,7 @@ jobs:
       - name: Run tests
         run: |
           ls -la test_cryptid_api.py
-          python test_cryptid_api.py
+          python3 test_cryptid_api.py
 
   build-and-push:
     name: Build and Push Docker Image
