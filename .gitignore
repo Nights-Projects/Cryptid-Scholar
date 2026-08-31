@@ -1,0 +1,28 @@
+# Data
+data/
+*.db
+*.db-journal
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+.venv/
+
+# Static assets (generated)
+static/thumbs/
+static/full/
+static/icon-*.png
+static/favicon.ico
+static/placeholder.jpg
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
