@@ -34,10 +34,10 @@ object DebugLogger {
 
         val writer = FileWriter(logFile, true)
         val timestamp = SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS", Locale.US).format(Date())
-        write(writer, "[$timestamp] === Debug logging initialized ===")
-        write(writer, "  Device: ${Build.MANUFACTURER} ${Build.MODEL}")
-        write(writer, "  Android: ${Build.VERSION.RELEASE} (SDK ${Build.VERSION.SDK_INT})")
-        write(writer, "  App versionCode: ${BuildConfig.VERSION_CODE}")
+        writer.write("[$timestamp] === Debug logging initialized ===\n")
+        writer.write("  Device: ${Build.MANUFACTURER} ${Build.MODEL}\n")
+        writer.write("  Android: ${Build.VERSION.RELEASE} (SDK ${Build.VERSION.SDK_INT})\n")
+        writer.write("  App versionCode: ${BuildConfig.VERSION_CODE}\n")
         writer.flush()
         writer.close()
     }
