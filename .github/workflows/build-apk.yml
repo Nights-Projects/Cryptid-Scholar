@@ -95,14 +95,14 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: cryptid-scholar-debug-apk-v${{ steps.bump.outputs.new_version_code }}
-          path: apk-output/v.alpha1.${{ steps.bump.outputs.new_version_code }}-debug.apk
+          path: apk-output/${{ steps.bump.outputs.padded_version }}-debug.apk
           if-no-files-found: warn
 
       - name: Upload Release APK artifact
         uses: actions/upload-artifact@v4
         with:
           name: cryptid-scholar-release-apk-v${{ steps.bump.outputs.new_version_code }}
-          path: apk-output/v.alpha1.${{ steps.bump.outputs.new_version_code }}.apk
+          path: apk-output/${{ steps.bump.outputs.padded_version }}.apk
           if-no-files-found: warn
 
       - name: Create Release with APK assets
@@ -114,7 +114,6 @@ jobs:
           draft: false
           prerelease: true
           generate_release_notes: true
-          allowUpdates: true
           files: |
-            apk-output/v.alpha1.$(printf "%02d" ${{ steps.bump.outputs.new_version_code }})-debug.apk
-            apk-output/v.alpha1.$(printf "%02d" ${{ steps.bump.outputs.new_version_code }}.apk
+            apk-output/${{ steps.bump.outputs.padded_version }}-debug.apk
+            apk-output/${{ steps.bump.outputs.padded_version }}.apk
