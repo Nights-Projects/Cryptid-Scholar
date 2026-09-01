@@ -18,12 +18,16 @@ android {
     }
 
     buildTypes {
+        debug {
+            buildConfigField "boolean", "ENABLE_DEBUG_LOGGING", "true"
+        }
         release {
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            buildConfigField "boolean", "ENABLE_DEBUG_LOGGING", "false"
         }
     }
 
@@ -33,6 +37,7 @@ android {
     }
 
     buildFeatures {
+        buildConfig = true
         // viewBinding = true  // Disabled - using findViewById
     }
 }
