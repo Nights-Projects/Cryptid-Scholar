@@ -125,6 +125,9 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        DebugLogger.init()
+        DebugLogger.log("MainActivity", "Activity created")
+        
         setContentView(R.layout.activity_main)
 
         recyclerView = findViewById(R.id.recyclerView)
