@@ -84,11 +84,12 @@ jobs:
       - name: Rename APK files with version
         run: |
           mkdir -p apk-output
-          cp android/app/build/outputs/apk/debug/app-debug.apk "apk-output/v.alpha1.${{ steps.bump.outputs.new_version_code }}-debug.apk"
-          cp android/app/build/outputs/apk/release/app-release-unsigned.apk "apk-output/v.alpha1.${{ steps.bump.outputs.new_version_code }}.apk"
+          PADDING=$(printf "v.alpha1.%02d" ${{ steps.bump.outputs.new_version_code }})
+          cp android/app/build/outputs/apk/debug/app-debug.apk "apk-output/${PADDING}-debug.apk"
+          cp android/app/build/outputs/apk/release/app-release-unsigned.apk "apk-output/${PADDING}.apk"
           echo "Renamed APK files:
-            Debug: v.alpha1.${{ steps.bump.outputs.new_version_code }}-debug.apk
-            Release: v.alpha1.${{ steps.bump.outputs.new_version_code }}.apk"
+            Debug: ${PADDING}-debug.apk
+            Release: ${PADDING}.apk"
 
       - name: Upload Debug APK artifact
         uses: actions/upload-artifact@v4
@@ -115,5 +116,5 @@ jobs:
           generate_release_notes: true
           allowUpdates: true
           files: |
-            apk-output/v.alpha1.${{ steps.bump.outputs.new_version_code }}-debug.apk
-            apk-output/v.alpha1.${{ steps.bump.outputs.new_version_code }}.apk
+            apk-output/v.alpha1.$(printf "%02d" ${{ steps.bump.outputs.new_version_code }})-debug.apk
+            apk-output/v.alpha1.$(printf "%02d" ${{ steps.bump.outputs.new_version_code }}.apk
